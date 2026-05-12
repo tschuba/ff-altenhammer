@@ -1,0 +1,31 @@
+services:
+  easyappointments:
+    image: alextselegidis/easyappointments:latest
+    restart: unless-stopped
+    environment:
+      BASE_URL: "https://buchung.feuerwehr.altenhammer.bayern"
+      DB_HOST: "db"
+      DB_NAME: "easyappointments"
+      DB_USERNAME: "easyappointments"
+      DB_PASSWORD: "7fUYhApEtDML0tDLZw0DBn48"
+      # SMTP — Outlook
+      GOOGLE_SYNC_FEATURE: "FALSE"
+    depends_on:
+      - db
+    # Coolify setzt Port + Traefik-Labels automatisch —
+    # Domain im Coolify-UI auf buchung.feuerwehr.altenhammer.bayern setzen
+
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: "easyappointments"
+      MYSQL_USER: "easyappointments"
+      MYSQL_PASSWORD: "7fUYhApEtDML0tDLZw0DBn48"
+      MYSQL_ROOT_PASSWORD: "Av2cWvRARMiQbcMPUCHhjQNP"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # Kein Port nach außen — nur intern erreichbar
+
+volumes:
+  mysql_data:

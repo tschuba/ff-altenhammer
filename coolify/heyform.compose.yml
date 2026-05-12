@@ -1,0 +1,32 @@
+services:
+  heyform:
+    image: heyform/community-edition:latest
+    restart: unless-stopped
+    environment:
+      APP_HOMEPAGE_URL: "https://forms.feuerwehr.altenhammer.bayern"
+      SESSION_KEY: "263ce43453214faa16e7247e9294ac86136e5873a3655e1e78a943d96c117177"
+      MONGO_URI: "mongodb://mongodb:27017/heyform"
+      # SMTP — Outlook
+      SMTP_HOST: "smtp-mail.outlook.com"
+      SMTP_PORT: "587"
+      SMTP_TLS: "true"
+      SMTP_SENDER: "Freiwillige Feuerwehr Altenhammer <ff-altenhammer@outlook.com>"
+      SMTP_USER: "ff-altenhammer@outlook.com"
+      SMTP_PASSWORD: "OUTLOOK_PASSWORT_HIER_EINTRAGEN"
+    depends_on:
+      - mongodb
+    # Coolify setzt Port + Traefik-Labels automatisch —
+    # Domain im Coolify-UI auf forms.feuerwehr.altenhammer.bayern setzen
+
+  mongodb:
+    image: mongo:7
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "heyform"
+      MONGO_INITDB_ROOT_PASSWORD: "e13de243d1e5b74d440a045ab2f61dcf"
+    volumes:
+      - mongodb_data:/data/db
+    # Kein Port nach außen — nur intern erreichbar
+
+volumes:
+  mongodb_data:
