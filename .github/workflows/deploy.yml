@@ -40,6 +40,15 @@ jobs:
             https://github.com/gohugoio/hugo/releases/download/v0.161.1/hugo_extended_0.161.1_linux-amd64.deb
           sudo dpkg -i hugo.deb
 
+      - name: Install LibreOffice
+        run: sudo apt-get install -y --no-install-recommends libreoffice-writer
+
+      - name: Convert DOCX to PDF
+        run: |
+          for f in static/dokumente/*.docx; do
+            soffice --headless --convert-to pdf --outdir static/dokumente/ "$f"
+          done
+
       - name: Build
         run: hugo --minify
 
