@@ -40,10 +40,26 @@ jobs:
             https://github.com/gohugoio/hugo/releases/download/v0.161.1/hugo_extended_0.161.1_linux-amd64.deb
           sudo dpkg -i hugo.deb
 
-      - name: Install LibreOffice
+      - name: PDF-Cache laden (Key = Hash der DOCX-Dateien)
+        uses: actions/cache@v4
+        id: cache-pdfs
+        with:
+          path: static/dokumente/*.pdf
+          key: pdfs-${{ hashFiles('static/dokumente/*.docx') }}
+
+      - name: apt-Cache für LibreOffice laden (nur bei Cache-Miss)
+        if: steps.cache-pdfs.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: /var/cache/apt/archives
+          key: apt-libreoffice-${{ runner.os }}-v1
+
+      - name: LibreOffice installieren (nur bei geändertem DOCX)
+        if: steps.cache-pdfs.outputs.cache-hit != 'true'
         run: sudo apt-get install -y --no-install-recommends libreoffice-writer
 
-      - name: Convert DOCX to PDF
+      - name: DOCX → PDF konvertieren (nur bei geändertem DOCX)
+        if: steps.cache-pdfs.outputs.cache-hit != 'true'
         run: |
           for f in static/dokumente/*.docx; do
             soffice --headless --convert-to pdf --outdir static/dokumente/ "$f"
