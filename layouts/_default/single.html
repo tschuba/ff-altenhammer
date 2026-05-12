@@ -1,7 +1,17 @@
 {{ define "main" }}
-<article class="max-w-3xl mx-auto px-4 py-12">
-  <h1 class="font-headline text-4xl font-bold mb-6">{{ .Title }}</h1>
-  <div class="prose prose-lg max-w-none">
+<section class="bg-primary text-white py-10 px-4">
+  <div class="max-w-4xl mx-auto">
+    <p class="font-headline text-sm uppercase tracking-widest text-red-200 mb-1">
+      {{- with .Parent }}{{ if ne .Kind "home" }}<a href="{{ .RelPermalink }}" class="hover:text-white transition-colors">{{ .Title }}</a> /{{ end }}{{ end -}}
+    </p>
+    <h1 class="font-headline text-4xl font-bold">{{ .Title }}</h1>
+  </div>
+</section>
+<article class="max-w-4xl mx-auto px-4 py-12">
+  <div class="prose prose-lg max-w-none
+    prose-headings:font-headline prose-headings:text-dark
+    prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+    prose-strong:text-dark">
     {{ .Content }}
   </div>
 </article>

@@ -1,0 +1,73 @@
+{{ define "main" }}
+<section class="bg-primary text-white py-10 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="font-headline text-4xl font-bold">Termine</h1>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 py-12">
+  {{ $cutoff := now.AddDate 0 0 -14 }}
+  {{ $alle := where .Pages "Date" "gt" $cutoff }}
+  {{ $kommend := where $alle "Date" "gt" now }}
+  {{ $aktuell := where $alle "Date" "le" now }}
+
+  {{ if or $kommend $aktuell }}
+
+  {{ if $kommend }}
+  <h2 class="font-headline text-2xl font-bold text-dark mb-6">Kommende Veranstaltungen</h2>
+  <div class="space-y-4 mb-12">
+    {{ range $kommend }}
+    {{ $monate := slice "Jan" "Feb" "Mär" "Apr" "Mai" "Jun" "Jul" "Aug" "Sep" "Okt" "Nov" "Dez" }}
+    <div class="bg-white rounded-xl p-5 flex flex-col sm:flex-row sm:items-start gap-4 shadow-sm border border-gray-100">
+      <div class="flex-shrink-0 bg-primary rounded-lg text-white text-center w-16 py-2">
+        <div class="font-headline text-2xl font-bold leading-none">{{ .Date.Format "02" }}</div>
+        <div class="text-xs uppercase tracking-wide opacity-80">{{ index $monate (sub (int (.Date.Format "1")) 1) }}</div>
+        <div class="text-xs opacity-60">{{ .Date.Format "2006" }}</div>
+      </div>
+      <div class="flex-grow">
+        <div class="font-headline font-bold text-dark text-lg leading-tight">{{ .Title }}</div>
+        <div class="text-sm text-gray-500 mt-1">
+          {{ .Date.Format "15:04 Uhr" }}{{ with .Params.ort }} · {{ . }}{{ end }}
+        </div>
+        {{ with .Content }}<div class="prose prose-sm mt-2 max-w-none text-gray-600">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if $aktuell }}
+  <h2 class="font-headline text-xl font-bold text-gray-400 mb-4">Kürzlich vergangen</h2>
+  <div class="space-y-3 mb-10 opacity-60">
+    {{ range $aktuell }}
+    {{ $monate := slice "Jan" "Feb" "Mär" "Apr" "Mai" "Jun" "Jul" "Aug" "Sep" "Okt" "Nov" "Dez" }}
+    <div class="bg-white rounded-lg p-4 flex items-center gap-4 border border-gray-100">
+      <div class="flex-shrink-0 bg-gray-200 rounded-lg text-gray-500 text-center w-14 py-1.5">
+        <div class="font-headline text-xl font-bold leading-none">{{ .Date.Format "02" }}</div>
+        <div class="text-xs uppercase tracking-wide">{{ index $monate (sub (int (.Date.Format "1")) 1) }}</div>
+      </div>
+      <div>
+        <div class="font-headline font-bold text-gray-600">{{ .Title }}</div>
+        <div class="text-xs text-gray-400">{{ .Date.Format "15:04 Uhr" }}{{ with .Params.ort }} · {{ . }}{{ end }}</div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ else }}
+  <div class="text-center py-16">
+    <p class="text-gray-500 text-lg mb-2">Aktuell keine Termine eingetragen.</p>
+    <p class="text-gray-400 text-sm">Schau bald wieder vorbei!</p>
+  </div>
+  {{ end }}
+
+  <div class="border-t border-gray-200 pt-8 text-sm text-gray-500">
+    Für kurzfristige Änderungen und aktuelle Infos folgt uns auf
+    {{ with .Site.Params.facebookUrl }}<a href="{{ . }}" target="_blank" rel="noopener" class="text-primary hover:underline">Facebook</a>{{ end }}
+    und
+    {{ with .Site.Params.instagramUrl }}<a href="{{ . }}" target="_blank" rel="noopener" class="text-primary hover:underline">Instagram</a>{{ end }}
+    — dort sind wir am schnellsten.
+  </div>
+</div>
+{{ end }}
