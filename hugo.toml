@@ -2,6 +2,7 @@ baseURL = "https://feuerwehr.altenhammer.bayern/"
 locale = "de-DE"
 title = "Freiwillige Feuerwehr Altenhammer"
 defaultContentLanguage = "de"
+buildFuture = true
 
 [params]
   aktiveMitglieder    = 32
