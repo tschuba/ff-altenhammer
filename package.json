@@ -1,0 +1,16 @@
+{
+  "name": "ff-altenhammer",
+  "version": "1.0.0",
+  "description": "Homepage Freiwillige Feuerwehr Altenhammer",
+  "scripts": {
+    "dev": "hugo server --buildDrafts",
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="bg-primary text-white py-24 px-4 text-center">
+  <div class="max-w-3xl mx-auto">
+    {{ if .Site.Params.jubilaeum }}
+    <div class="inline-block bg-gold text-dark font-headline text-sm font-bold px-4 py-1 rounded mb-6 uppercase tracking-wide">
+      100 Jahre · 1926–2026
+    </div>
+    {{ end }}
+    <h1 class="font-headline text-5xl font-bold mb-4">Freiwillige Feuerwehr Altenhammer</h1>
+    <p class="text-xl mb-8 text-red-100">Für unsere Gemeinde. Ehrenamtlich. Seit {{ .Site.Params.gegruendet }}.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/mitmachen/" class="bg-white text-primary font-headline font-bold px-6 py-3 rounded hover:bg-gray-100 transition-colors">
+        Mitmachen
+      </a>
+      <a href="/ueber-uns/" class="border-2 border-white text-white font-headline font-bold px-6 py-3 rounded hover:bg-white hover:text-primary transition-colors">
+        Über uns
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

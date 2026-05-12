@@ -1,0 +1,36 @@
+<footer class="bg-dark text-white mt-16">
+  <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+    {{/* Logo + Name */}}
+    <div class="flex flex-col gap-3">
+      <img src="/images/logo-white.svg" alt="FF Altenhammer" class="h-12 w-auto">
+      <p class="font-headline text-lg">Freiwillige Feuerwehr Altenhammer</p>
+      <p class="text-sm text-gray-400">Gegründet {{ .Site.Params.gegruendet }}</p>
+    </div>
+
+    {{/* Navigation */}}
+    <div>
+      <p class="font-headline text-sm uppercase tracking-wide text-gray-400 mb-3">Seiten</p>
+      <nav class="flex flex-col gap-2 text-sm text-gray-300">
+        <a href="/termine/" class="hover:text-white transition-colors">Termine</a>
+        <a href="/ueber-uns/" class="hover:text-white transition-colors">Über uns</a>
+        <a href="/mitmachen/" class="hover:text-white transition-colors">Mitmachen</a>
+        <a href="/spenden/" class="hover:text-white transition-colors">Spenden</a>
+        <a href="/kontakt/" class="hover:text-white transition-colors">Kontakt</a>
+      </nav>
+    </div>
+
+    {{/* Rechtliches */}}
+    <div>
+      <p class="font-headline text-sm uppercase tracking-wide text-gray-400 mb-3">Rechtliches</p>
+      <nav class="flex flex-col gap-2 text-sm text-gray-300">
+        <a href="/impressum/" class="hover:text-white transition-colors">Impressum</a>
+        <a href="/datenschutz/" class="hover:text-white transition-colors">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-700 text-center text-xs text-gray-500 py-4">
+    &copy; {{ now.Year }} Freiwillige Feuerwehr Altenhammer
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "Bash(git -C /Users/thomas/Projects/ff-altenhammer log --oneline -3)",
+      "Bash(brew install *)",
+      "Bash(hugo new *)",
+      "Bash(hugo --minify)"
+    ]
+  }
+}

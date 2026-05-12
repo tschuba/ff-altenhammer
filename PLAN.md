@@ -939,7 +939,7 @@ feuerwehr.altenhammer.bayern.          A      185.199.108.153
 feuerwehr.altenhammer.bayern.          A      185.199.109.153
 feuerwehr.altenhammer.bayern.          A      185.199.110.153
 feuerwehr.altenhammer.bayern.          A      185.199.111.153
-www.feuerwehr.altenhammer.bayern.      CNAME  <github-username>.github.io.
+www.feuerwehr.altenhammer.bayern.      CNAME  tschuba.github.io.
 forms.feuerwehr.altenhammer.bayern.    CNAME  schubs.net.
 buchung.feuerwehr.altenhammer.bayern.  CNAME  schubs.net.
 push.feuerwehr.altenhammer.bayern.     CNAME  schubs.net.

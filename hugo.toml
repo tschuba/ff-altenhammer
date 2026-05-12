@@ -1,0 +1,19 @@
+baseURL = "https://feuerwehr.altenhammer.bayern/"
+locale = "de-DE"
+title = "Freiwillige Feuerwehr Altenhammer"
+defaultContentLanguage = "de"
+
+[params]
+  aktiveMitglieder    = 32
+  foerdermitglieder   = 45
+  gegruendet          = 1926
+  jubilaeum           = true
+  facebookUrl         = "https://facebook.com/"
+  instagramUrl        = "https://instagram.com/"
+  whatsappUrl         = "https://wa.me/"
+  heyformKontakt      = ""
+  heyformSpende       = ""
+  easyAppointmentsUrl = "https://buchung.feuerwehr.altenhammer.bayern"
+
+[build]
+  writeStats = true
