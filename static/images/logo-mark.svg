@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-label="FF Altenhammer">
-  <!-- Maltese / fire brigade cross -->
-  <path d="M18 2 L38 2 L38 18 L54 18 L54 38 L38 38 L38 54 L18 54 L18 38 L2 38 L2 18 L18 18 Z" fill="#CC0000"/>
-  <!-- Flame -->
-  <path d="M28 11 C28 11 22 20 22 27 C22 32.5 24.7 37 28 37 C31.3 37 34 32.5 34 27 C34 20 28 11 28 11 Z" fill="white" opacity="0.95"/>
-  <path d="M28 21 C28 21 24.5 25 24.5 28.5 C24.5 31 26.1 33 28 33 C29.9 33 31.5 31 31.5 28.5 C31.5 25 28 21 28 21 Z" fill="#F0A500"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1254 1254" role="img" aria-label="FF Altenhammer">
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="627" cy="627" r="620"/>
+    </clipPath>
+  </defs>
+  <image href="/images/logo-mark.png" width="1254" height="1254" clip-path="url(#circle-clip)"/>
 </svg>
