@@ -58,7 +58,20 @@ Die DOCX-Dateien in `static/dokumente/` sind Binärdateien und können nicht im 
 
 Die PDFs werden bei jedem Build **automatisch aus den DOCX-Dateien generiert** — kein manueller Schritt nötig.
 
-Wenn das Formular-Skript selbst geändert wird (Felder, Texte): `python3 scripts/generate_forms.py` lokal ausführen — das erzeugt neue DOCX-Dateien, die dann committed werden.
+### Links in Markdown-Dateien
+
+Interne Seitenlinks müssen `{{< relref >}}` verwenden, damit sie auf GitHub Pages korrekt auflösen:
+
+```markdown
+[Termine]({{< relref "termine" >}})
+[Mitmachen]({{< relref "mitmachen" >}}#aktiv)
+```
+
+Externe Links mit `target="_blank"` via `extlink`-Shortcode:
+
+```markdown
+{{< extlink "https://example.com" "Link-Text" >}}
+```
 
 ---
 
@@ -69,22 +82,11 @@ Wenn das Formular-Skript selbst geändert wird (Felder, Texte): `python3 scripts
 | Datei | Was fehlt |
 |---|---|
 | `content/spenden.md` | IBAN + BIC des Vereinskontos |
-| `content/kontakt.md` | Genaue Adresse des Feuerwehrhauses (falls abweichend von Flossenbürger Str. 9) |
 | `content/kuchentheke.md` | Ausstattung, Mietpreis, Kaution, Bedingungen |
 | `content/fahrzeuge.md` | Fahrzeuge, Baujahre, Fotos |
-| `content/ueber-uns/mannschaft.md` | Kommandant, Stellvertreter, Mannschaftsfoto |
 | `content/ueber-uns/geschichte.md` | Chronik, historische Fotos |
 | `content/jubilaeum/_index.md` | Chronik, Archivfotos |
-| `content/kinderfeuerwehr/_index.md` | Fotos |
-| `hugo.toml` | Echte Facebook-/Instagram-/WhatsApp-URLs eintragen |
-
-### Logos einbinden
-
-| Logo | Status | Aktion |
-|---|---|---|
-| FF Altenhammer Hauptlogo | Platzhalter | SVG bereitstellen → `static/images/logo-mark.svg` + `logo-mark-white.svg` ersetzen |
-| Kinderfeuerwehr-Logo | Platzhalter | SVG bereitstellen → in `content/kinderfeuerwehr/_index.md` einbinden |
-| Jubiläums-Logo (100 Jahre) | Platzhalter | SVG bereitstellen → als `assets/images/jubilaeum-logo.svg` ablegen |
+| `content/kinderfeuerwehr/_index.md` | Fotos der Kinder |
 
 ### GiroCode-QR für Spendenseite
 
@@ -173,3 +175,18 @@ Automatisch bei jedem Push auf `main` via GitHub Actions (`.github/workflows/dep
 
 PDFs werden nur neu generiert wenn sich DOCX-Dateien geändert haben (gecacht per DOCX-Hash).
 LibreOffice-Pakete sind ebenfalls gecacht — Version bumpen: `v1` → `v2` in `deploy.yml`, Zeile `apt-libreoffice-`.
+
+---
+
+## Erledigte Einrichtung (Referenz)
+
+| Was | Details |
+| --- | --- |
+| FF-Logo | `static/images/logo-mark.png` — ChatGPT-generiert (zwei Feuerwehrmänner, Seilring, Burg Flossenbürg) |
+| Kinderfeuerwehr-Logo | `static/images/logo-loeschzwerge.png` — Hammerer Löschzwerge |
+| Jubiläums-Logo | `static/images/logo-jubilaeum.png` — 100 Jahre 1926–2026 |
+| Mannschaftsfoto | `static/images/mannschaft.jpg` |
+| Führung | 1. Kommandant: Rüdiger Hettler · 2. Kommandant: Florian Moser |
+| Social Media | Facebook & Instagram verlinkt, WhatsApp entfernt |
+| Sticky Navigation | Header fixiert beim Scrollen, Logo blendet sich ein wenn Hero-Logo aus dem Bild scrollt |
+| GitHub Pages Pfade | Alle internen Links mit `relURL` / `relref` — funktionieren unter Subdirectory und Custom Domain |
