@@ -13,7 +13,7 @@ Flossenbürger Str. 9
 **Telefon:** 09603 92060  
 **E-Mail:** [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)
 
-{{< extlink "https://www.openstreetmap.org/search?query=Altenhammer+Flossenbürg" "Auf der Karte anzeigen (OpenStreetMap)" >}}
+{{< extlink "https://osm.org/go/0JTlTqp_h?m=&node=1649696417" "Auf der Karte anzeigen (OpenStreetMap)" >}}
 
 ---
 
