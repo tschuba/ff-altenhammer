@@ -2,7 +2,7 @@
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
 
     {{/* Logo + Seitenname */}}
-    <a href="/" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+    <a href="{{ "/" | relURL }}" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
       <img id="nav-logo" src="{{ "images/logo-mark.png" | relURL }}" alt="FF Altenhammer Logo" class="h-12 w-12 rounded-full transition-opacity duration-300">
       <span class="font-headline text-xl font-bold leading-tight hidden sm:block">
         FF Altenhammer
@@ -11,14 +11,14 @@
 
     {{/* Desktop-Navigation */}}
     <nav class="hidden lg:flex items-center gap-6 font-body text-sm font-medium">
-      <a href="/termine/" class="hover:text-gold transition-colors">Termine</a>
-      <a href="/ueber-uns/" class="hover:text-gold transition-colors">Über uns</a>
-      <a href="/kinderfeuerwehr/" class="hover:text-gold transition-colors">Kinderfeuerwehr</a>
-      <a href="/fahrzeuge/" class="hover:text-gold transition-colors">Fahrzeuge</a>
-      <a href="/kuchentheke/" class="hover:text-gold transition-colors">Kuchentheke</a>
-      <a href="/mitmachen/" class="hover:text-gold transition-colors">Mitmachen</a>
-      <a href="/spenden/" class="hover:text-gold transition-colors">Spenden</a>
-      <a href="/kontakt/" class="hover:text-gold transition-colors">Kontakt</a>
+      <a href="{{ "/termine/" | relURL }}" class="hover:text-gold transition-colors">Termine</a>
+      <a href="{{ "/ueber-uns/" | relURL }}" class="hover:text-gold transition-colors">Über uns</a>
+      <a href="{{ "/kinderfeuerwehr/" | relURL }}" class="hover:text-gold transition-colors">Kinderfeuerwehr</a>
+      <a href="{{ "/fahrzeuge/" | relURL }}" class="hover:text-gold transition-colors">Fahrzeuge</a>
+      <a href="{{ "/kuchentheke/" | relURL }}" class="hover:text-gold transition-colors">Kuchentheke</a>
+      <a href="{{ "/mitmachen/" | relURL }}" class="hover:text-gold transition-colors">Mitmachen</a>
+      <a href="{{ "/spenden/" | relURL }}" class="hover:text-gold transition-colors">Spenden</a>
+      <a href="{{ "/kontakt/" | relURL }}" class="hover:text-gold transition-colors">Kontakt</a>
     </nav>
 
     {{/* Social Icons + Hamburger */}}
@@ -51,14 +51,14 @@
 
   {{/* Mobile-Navigation */}}
   <nav id="mobile-menu" class="hidden lg:hidden bg-primary-dark px-4 pb-4 font-body text-sm font-medium flex flex-col gap-3">
-    <a href="/termine/" class="block py-1 hover:text-gold transition-colors">Termine</a>
-    <a href="/ueber-uns/" class="block py-1 hover:text-gold transition-colors">Über uns</a>
-    <a href="/kinderfeuerwehr/" class="block py-1 hover:text-gold transition-colors">Kinderfeuerwehr</a>
-    <a href="/fahrzeuge/" class="block py-1 hover:text-gold transition-colors">Fahrzeuge</a>
-    <a href="/kuchentheke/" class="block py-1 hover:text-gold transition-colors">Kuchentheke</a>
-    <a href="/mitmachen/" class="block py-1 hover:text-gold transition-colors">Mitmachen</a>
-    <a href="/spenden/" class="block py-1 hover:text-gold transition-colors">Spenden</a>
-    <a href="/kontakt/" class="block py-1 hover:text-gold transition-colors">Kontakt</a>
+    <a href="{{ "/termine/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Termine</a>
+    <a href="{{ "/ueber-uns/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Über uns</a>
+    <a href="{{ "/kinderfeuerwehr/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Kinderfeuerwehr</a>
+    <a href="{{ "/fahrzeuge/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Fahrzeuge</a>
+    <a href="{{ "/kuchentheke/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Kuchentheke</a>
+    <a href="{{ "/mitmachen/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Mitmachen</a>
+    <a href="{{ "/spenden/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Spenden</a>
+    <a href="{{ "/kontakt/" | relURL }}" class="block py-1 hover:text-gold transition-colors">Kontakt</a>
   </nav>
 </header>
 

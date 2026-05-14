@@ -1,13 +1,13 @@
 {{ define "main" }}
 
 {{/* ── 1. HERO ── */}}
-<section class="bg-primary text-white py-20 px-4 text-center relative overflow-hidden">
+<section class="bg-primary text-white py-12 px-4 text-center relative overflow-hidden">
   {{/* Subtle diagonal texture */}}
   <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 50%); background-size: 12px 12px;"></div>
   <div class="relative max-w-3xl mx-auto">
     {{/* Logo mark */}}
     <div class="flex justify-center mb-6">
-      <img id="hero-logo" src="{{ "images/logo-mark.png" | relURL }}" alt="FF Altenhammer" class="h-36 w-36 rounded-full shadow-2xl">
+      <img id="hero-logo" src="{{ "images/logo-mark.png" | relURL }}" alt="FF Altenhammer" class="rounded-full shadow-2xl" style="height:20rem;width:20rem">
     </div>
     {{ if .Site.Params.jubilaeum }}
     <div class="inline-block bg-gold text-dark font-headline text-sm font-bold px-5 py-1.5 rounded-full mb-6 uppercase tracking-wider shadow">
@@ -21,10 +21,10 @@
       Ehrenamtlich. Einsatzbereit. Für unsere Gemeinde — seit {{ .Site.Params.gegruendet }}.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/mitmachen/" class="bg-white text-primary font-headline font-bold px-8 py-3 rounded shadow hover:bg-gray-100 transition-colors">
+      <a href="{{ "/mitmachen/" | relURL }}" class="bg-white text-primary font-headline font-bold px-8 py-3 rounded shadow hover:bg-gray-100 transition-colors">
         Mitmachen
       </a>
-      <a href="/ueber-uns/" class="border-2 border-white text-white font-headline font-bold px-8 py-3 rounded hover:bg-white hover:text-primary transition-colors">
+      <a href="{{ "/ueber-uns/" | relURL }}" class="border-2 border-white text-white font-headline font-bold px-8 py-3 rounded hover:bg-white hover:text-primary transition-colors">
         Über uns
       </a>
     </div>
@@ -47,7 +47,7 @@
       <p class="text-dark opacity-80 max-w-lg mb-5">
         Seit 1926 schützt die Freiwillige Feuerwehr Altenhammer ihre Gemeinde. Wir feiern dieses besondere Jubiläum gemeinsam mit euch.
       </p>
-      <a href="/jubilaeum/" class="inline-block bg-dark text-white font-headline font-bold px-6 py-3 rounded hover:bg-primary transition-colors">
+      <a href="{{ "/jubilaeum/" | relURL }}" class="inline-block bg-dark text-white font-headline font-bold px-6 py-3 rounded hover:bg-primary transition-colors">
         Zum Jubiläum →
       </a>
     </div>
@@ -71,7 +71,7 @@
         <p class="text-dark leading-relaxed mb-6">
           Dahinter stehen {{ .Site.Params.foerdermitglieder }} Fördermitglieder, die unsere Arbeit durch ihre Mitgliedschaft im Verein ermöglichen.
         </p>
-        <a href="/ueber-uns/" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
+        <a href="{{ "/ueber-uns/" | relURL }}" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
           Mehr erfahren
         </a>
       </div>
@@ -145,7 +145,7 @@
     <p class="text-gray-500 mb-8">Aktuell keine Termine eingetragen.</p>
     {{ end }}
     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-      <a href="/termine/" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
+      <a href="{{ "/termine/" | relURL }}" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
         Alle Termine
       </a>
       <p class="text-sm text-gray-500">
@@ -170,7 +170,7 @@
       <p class="text-red-100 leading-relaxed mb-6 max-w-lg">
         Für Kinder ab 6 Jahren — spielerisch und sicher die Feuerwehr entdecken. Wir freuen uns über jeden neuen Nachwuchs!
       </p>
-      <a href="/kinderfeuerwehr/" class="inline-block bg-white text-primary font-headline font-bold px-6 py-2.5 rounded hover:bg-gray-100 transition-colors">
+      <a href="{{ "/kinderfeuerwehr/" | relURL }}" class="inline-block bg-white text-primary font-headline font-bold px-6 py-2.5 rounded hover:bg-gray-100 transition-colors">
         Mehr erfahren
       </a>
     </div>
@@ -187,7 +187,7 @@
       <p class="text-gray-600 leading-relaxed mb-4">
         Unsere Kuchentheke kann für Veranstaltungen gemietet werden. Einfach Verfügbarkeit prüfen und online anfragen.
       </p>
-      <a href="/kuchentheke/" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
+      <a href="{{ "/kuchentheke/" | relURL }}" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
         Verfügbarkeit prüfen
       </a>
     </div>
@@ -207,13 +207,13 @@
         <div class="font-headline text-primary text-sm uppercase tracking-widest mb-1">Aktiv</div>
         <h3 class="font-headline text-xl font-bold text-dark mb-3">Einsatzkraft werden</h3>
         <p class="text-gray-600 text-sm leading-relaxed mb-4">Ab 16 Jahren. Übungen, Ausbildung, Einsätze. {{ .Site.Params.aktiveMitglieder }} aktive Mitglieder zählen wir heute.</p>
-        <a href="/mitmachen/#aktiv" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
+        <a href="{{ "/mitmachen/#aktiv" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
       </div>
       <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-sm">
         <div class="font-headline text-gray-500 text-sm uppercase tracking-widest mb-1">Fördernd</div>
         <h3 class="font-headline text-xl font-bold text-dark mb-3">Fördermitglied werden</h3>
         <p class="text-gray-600 text-sm leading-relaxed mb-4">Unterstütze uns mit einer Mitgliedschaft im Verein. {{ .Site.Params.foerdermitglieder }} Fördermitglieder stärken uns bereits den Rücken.</p>
-        <a href="/mitmachen/#foerdernd" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
+        <a href="{{ "/mitmachen/#foerdernd" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
       </div>
     </div>
   </div>

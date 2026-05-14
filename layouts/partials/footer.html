@@ -12,11 +12,11 @@
     <div>
       <p class="font-headline text-sm uppercase tracking-wide text-gray-400 mb-3">Seiten</p>
       <nav class="flex flex-col gap-2 text-sm text-gray-300">
-        <a href="/termine/" class="hover:text-white transition-colors">Termine</a>
-        <a href="/ueber-uns/" class="hover:text-white transition-colors">Über uns</a>
-        <a href="/mitmachen/" class="hover:text-white transition-colors">Mitmachen</a>
-        <a href="/spenden/" class="hover:text-white transition-colors">Spenden</a>
-        <a href="/kontakt/" class="hover:text-white transition-colors">Kontakt</a>
+        <a href="{{ "/termine/" | relURL }}" class="hover:text-white transition-colors">Termine</a>
+        <a href="{{ "/ueber-uns/" | relURL }}" class="hover:text-white transition-colors">Über uns</a>
+        <a href="{{ "/mitmachen/" | relURL }}" class="hover:text-white transition-colors">Mitmachen</a>
+        <a href="{{ "/spenden/" | relURL }}" class="hover:text-white transition-colors">Spenden</a>
+        <a href="{{ "/kontakt/" | relURL }}" class="hover:text-white transition-colors">Kontakt</a>
       </nav>
     </div>
 
@@ -24,8 +24,8 @@
     <div>
       <p class="font-headline text-sm uppercase tracking-wide text-gray-400 mb-3">Rechtliches</p>
       <nav class="flex flex-col gap-2 text-sm text-gray-300">
-        <a href="/impressum/" class="hover:text-white transition-colors">Impressum</a>
-        <a href="/datenschutz/" class="hover:text-white transition-colors">Datenschutz</a>
+        <a href="{{ "/impressum/" | relURL }}" class="hover:text-white transition-colors">Impressum</a>
+        <a href="{{ "/datenschutz/" | relURL }}" class="hover:text-white transition-colors">Datenschutz</a>
       </nav>
     </div>
   </div>
