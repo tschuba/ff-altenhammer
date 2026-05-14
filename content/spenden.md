@@ -30,4 +30,4 @@ Bis dahin wende dich bitte direkt an uns:
 
 ---
 
-Alternativ kannst du uns auch als [Fördermitglied](/mitmachen/#foerdernd) unterstützen — mit einem festen Jahresbeitrag, der unsere Arbeit dauerhaft stärkt.
+Alternativ kannst du uns auch als [Fördermitglied]({{< relref "mitmachen" >}}#foerdernd) unterstützen — mit einem festen Jahresbeitrag, der unsere Arbeit dauerhaft stärkt.

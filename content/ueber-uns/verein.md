@@ -11,7 +11,7 @@ Als Fördermitglied unterstützt du uns mit einem jährlichen Beitrag. Keine Üb
 
 Aktuell zählen wir **45 Fördermitglieder**. Herzlichen Dank für eure Unterstützung!
 
-→ [Jetzt Fördermitglied werden](/mitmachen/#foerdernd)
+→ [Jetzt Fördermitglied werden]({{< relref "mitmachen" >}}#foerdernd)
 
 ## Vereinsdaten
 
