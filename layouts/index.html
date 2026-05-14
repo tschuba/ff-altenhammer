@@ -7,7 +7,7 @@
   <div class="relative max-w-3xl mx-auto">
     {{/* Logo mark */}}
     <div class="flex justify-center mb-6">
-      <img src="/images/logo-mark.png" alt="FF Altenhammer" class="h-32 w-32 rounded-full shadow-2xl">
+      <img src="{{ "images/logo-mark.png" | relURL }}" alt="FF Altenhammer" class="h-32 w-32 rounded-full shadow-2xl">
     </div>
     {{ if .Site.Params.jubilaeum }}
     <div class="inline-block bg-gold text-dark font-headline text-sm font-bold px-5 py-1.5 rounded-full mb-6 uppercase tracking-wider shadow">
@@ -165,7 +165,7 @@
 <section class="py-16 px-4 bg-primary text-white">
   <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
     <div class="flex-shrink-0">
-      <img src="/images/logo-loeschzwerge.png" alt="Hammerer Löschzwerge" class="h-28 w-auto drop-shadow-lg">
+      <img src="{{ "images/logo-loeschzwerge.png" | relURL }}" alt="Hammerer Löschzwerge" class="h-28 w-auto drop-shadow-lg">
     </div>
     <div>
       <p class="font-headline text-sm uppercase tracking-widest text-red-200 mb-1">Nachwuchs</p>
