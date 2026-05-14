@@ -13,12 +13,11 @@ Unsere aktive Mannschaft besteht aus **32 Einsatzkräften** aus Altenhammer und 
 |---|---|
 | 1. Vorstand | Florian Plödt |
 | 2. Vorstand | Silke Schulte-Bahrenberg |
-| Kommandant | *wird ergänzt* |
+| 1. Kommandant | Rüdiger Hettler |
+| 2. Kommandant | Florian Moser |
 
 ## Einsatzkräfte
 
-<!-- TODO: Mannschaftsfoto einfügen -->
+{{< figure src="images/mannschaft.jpg" alt="Mannschaft der Freiwilligen Feuerwehr Altenhammer" class="rounded-xl w-full" >}}
 
-*Foto der Mannschaft folgt.*
-
-Interesse? Komm einfach zum nächsten [Übungsabend](/termine/) vorbei oder [melde dich bei uns](/kontakt/).
+Interesse? Komm einfach zum nächsten [Übungsabend]({{< relref "termine" >}}) vorbei oder [melde dich bei uns]({{< relref "kontakt" >}}).

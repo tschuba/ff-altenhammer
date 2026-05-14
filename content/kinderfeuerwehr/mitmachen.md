@@ -24,4 +24,4 @@ Für die Anmeldung bitte den Aufnahmeantrag für Minderjährige ausfüllen:
 
 ## Nächste Termine
 
-Die aktuellen Termine der Kinderfeuerwehr findest du unter [Termine](/termine/).
+Die aktuellen Termine der Kinderfeuerwehr findest du unter [Termine]({{< relref "termine" >}}).

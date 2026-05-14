@@ -18,4 +18,4 @@ Die Kinderfeuerwehr Altenhammer ist der ideale Einstieg für Kinder ab **6 Jahre
 
 ## Mitmachen
 
-Interesse? Alle Infos zur Anmeldung unter [Kinderfeuerwehr — Mitmachen](/kinderfeuerwehr/mitmachen/).
+Interesse? Alle Infos zur Anmeldung unter [Kinderfeuerwehr — Mitmachen]({{< relref "kinderfeuerwehr/mitmachen" >}}).
