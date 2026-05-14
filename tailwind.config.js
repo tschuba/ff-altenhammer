@@ -30,6 +30,7 @@ module.exports = {
       },
     },
   },
+  safelist: ['opacity-0'],
   plugins: [
     require('@tailwindcss/typography'),
   ],

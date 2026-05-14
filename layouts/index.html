@@ -7,7 +7,7 @@
   <div class="relative max-w-3xl mx-auto">
     {{/* Logo mark */}}
     <div class="flex justify-center mb-6">
-      <img src="{{ "images/logo-mark.png" | relURL }}" alt="FF Altenhammer" class="h-32 w-32 rounded-full shadow-2xl">
+      <img id="hero-logo" src="{{ "images/logo-mark.png" | relURL }}" alt="FF Altenhammer" class="h-36 w-36 rounded-full shadow-2xl">
     </div>
     {{ if .Site.Params.jubilaeum }}
     <div class="inline-block bg-gold text-dark font-headline text-sm font-bold px-5 py-1.5 rounded-full mb-6 uppercase tracking-wider shadow">
@@ -242,5 +242,17 @@
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  var hero = document.getElementById('hero-logo');
+  var nav  = document.getElementById('nav-logo');
+  if (!hero || !nav) return;
+  nav.classList.add('opacity-0');
+  new IntersectionObserver(function (entries) {
+    nav.classList.toggle('opacity-0', entries[0].isIntersecting);
+  }, { threshold: 0 }).observe(hero);
+})();
+</script>
 
 {{ end }}
