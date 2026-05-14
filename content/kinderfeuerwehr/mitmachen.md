@@ -20,7 +20,7 @@ Für die Anmeldung bitte den Aufnahmeantrag für Minderjährige ausfüllen:
 
 | | |
 |---|---|
-| Aufnahmeantrag (Minderjährige) | [Download .pdf](/dokumente/aufnahmeantrag-minderjaehrige.pdf) · [Download .docx](/dokumente/aufnahmeantrag-minderjaehrige.docx) |
+| Aufnahmeantrag (Minderjährige) | [Download .pdf](../../dokumente/aufnahmeantrag-minderjaehrige.pdf) · [Download .docx](../../dokumente/aufnahmeantrag-minderjaehrige.docx) |
 
 ## Nächste Termine
 

@@ -27,8 +27,8 @@ Fülle das passende Formular aus und gib es beim Vorstand ab — oder sende es p
 
 | Formular | DOCX | PDF |
 |---|---|---|
-| Aufnahmeantrag (ab 18 Jahre) | [Download .docx](/dokumente/aufnahmeantrag-erwachsene.docx) | [Download .pdf](/dokumente/aufnahmeantrag-erwachsene.pdf) |
-| Aufnahmeantrag (Minderjährige) | [Download .docx](/dokumente/aufnahmeantrag-minderjaehrige.docx) | [Download .pdf](/dokumente/aufnahmeantrag-minderjaehrige.pdf) |
+| Aufnahmeantrag (ab 18 Jahre) | [Download .docx](../dokumente/aufnahmeantrag-erwachsene.docx) | [Download .pdf](../dokumente/aufnahmeantrag-erwachsene.pdf) |
+| Aufnahmeantrag (Minderjährige) | [Download .docx](../dokumente/aufnahmeantrag-minderjaehrige.docx) | [Download .pdf](../dokumente/aufnahmeantrag-minderjaehrige.pdf) |
 
 ## Kontakt
 
