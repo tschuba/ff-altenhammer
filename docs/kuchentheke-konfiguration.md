@@ -23,7 +23,8 @@ Die Kuchentheke-App zeigt auf der Website einen Verfügbarkeitskalender an, der 
 
 1. Browser öffnen: [portal.azure.com](https://portal.azure.com)
 2. Mit `ff-altenhammer@outlook.com` anmelden
-3. Suche oben: **"App-Registrierungen"** → öffnen
+3. Oben auf das **Lupen-Symbol** klicken → `App-Registrierungen` eintippen → ersten Treffer öffnen
+   *(alternativ: linkes Menü → **Microsoft Entra ID** → linkes Untermenü → **App-Registrierungen**)*
 4. **"+ Neue Registrierung"** klicken
 5. Formular ausfüllen:
    - Name: `FF Altenhammer Kuchentheke`

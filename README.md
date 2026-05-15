@@ -106,14 +106,23 @@ Sobald IBAN bekannt: GiroCode-SVG generieren (EPC-Standard) und in `content/spen
 8. **Spendenquittung-Formular** anlegen (alle Felder) — Betreff-Präfix `[FF-Spendenquittung]`
 9. ~~Embed-Link beider Formulare in `content/kontakt.md` bzw. `content/spenden.md` eintragen~~ ✓ erledigt (Shortcode `{{</* heyform "FORM-ID" */>}}`)
 
-#### Easy!Appointments (Kuchentheke-Buchung)
+#### Kuchentheke Buchungs-App
 
-1. Coolify → Projekt „FF Altenhammer" → Neuer Service → Docker Compose → `coolify/easyappointments.compose.yml`
-2. Domain: `buchung.feuerwehr.altenhammer.bayern`, Port `80`
-3. Setup-Wizard: SMTP konfigurieren (`smtp-mail.outlook.com:587`, `ff-altenhammer@outlook.com`)
-4. Service **„Kuchentheke"** anlegen, manuelle Bestätigung aktivieren
-5. Betreff-Präfix: `[FF-Kuchentheke]`
-6. Buchungs-Widget-Code in `content/kuchentheke.md` eintragen
+1. Coolify → Projekt „FF Altenhammer" → Neuer Service → Docker Compose → `coolify/kuchentheke.compose.yml`
+2. Domain: `buchung.feuerwehr.altenhammer.bayern`
+3. Image `ghcr.io/tschuba/kuchentheke-app:latest` wird automatisch per GitHub Actions gebaut
+4. Umgebungsvariablen im Coolify-UI setzen:
+
+   | Variable | Wert |
+   | --- | --- |
+   | `MICROSOFT_CLIENT_ID` | Azure App Registration → siehe [docs/kuchentheke-konfiguration.md](docs/kuchentheke-konfiguration.md) |
+   | `MICROSOFT_CLIENT_SECRET` | Azure App Registration → siehe [docs/kuchentheke-konfiguration.md](docs/kuchentheke-konfiguration.md) |
+   | `SECRET_KEY` | Zufälliger 32-Zeichen-String (`openssl rand -hex 16`) |
+   | `CALENDAR_NAME` | `Kuchentheke` |
+   | `BASE_URL` | `https://buchung.feuerwehr.altenhammer.bayern` |
+
+5. Service starten → einmalig `https://buchung.feuerwehr.altenhammer.bayern/setup` aufrufen und mit `ff-altenhammer@outlook.com` autorisieren
+6. Vollständige Anleitung (Azure App Registration, Outlook-Kalender, Troubleshooting): `docs/kuchentheke-konfiguration.md`
 
 #### Traefik Rate Limiting (nach Deployment)
 
@@ -157,7 +166,7 @@ Die Site ist immer unter `tschuba.github.io/ff-altenhammer` erreichbar. Die Cust
 | CNAME | `feuerwehr` | `tschuba.github.io.` | GitHub Pages Hauptdomain |
 | CNAME | `www.feuerwehr` | `tschuba.github.io.` | www-Weiterleitung |
 | CNAME | `forms.feuerwehr` | `schubs.net.` | HeyForm (Coolify/Raspi) |
-| CNAME | `buchung.feuerwehr` | `schubs.net.` | Easy!Appointments (Coolify/Raspi) |
+| CNAME | `buchung.feuerwehr` | `schubs.net.` | Kuchentheke App (Coolify/Raspi) |
 
 `schubs.net` zeigt via DynDNS auf den Raspberry Pi — CNAMEs folgen automatisch bei IP-Wechsel.
 
@@ -169,7 +178,8 @@ Automatisch bei jedem Push auf `main` via GitHub Actions (`.github/workflows/dep
 
 | Trigger | Was passiert |
 | --- | --- |
-| Push auf `main` | Build + Deploy |
+| Push auf `main` | Hugo Build + Deploy auf GitHub Pages |
+| Push auf `main` (Änderungen in `kuchentheke-app/`) | Docker Image Build + Push nach `ghcr.io` |
 | Täglich 04:00 UTC | Rebuild — abgelaufene Termine verschwinden automatisch |
 | Manuell | GitHub → Actions → „Run workflow" |
 
@@ -190,3 +200,5 @@ LibreOffice-Pakete sind ebenfalls gecacht — Version bumpen: `v1` → `v2` in `
 | Social Media | Facebook & Instagram verlinkt, WhatsApp entfernt |
 | Sticky Navigation | Header fixiert beim Scrollen, Logo blendet sich ein wenn Hero-Logo aus dem Bild scrollt |
 | GitHub Pages Pfade | Alle internen Links mit `relURL` / `relref` — funktionieren unter Subdirectory und Custom Domain |
+| HeyForm | Kontakt- + Spendenquittungsformular auf `ff-forms.schubs.net` |
+| Kuchentheke App | Docker-Container auf Coolify, einmalig `/setup` autorisiert — Details: `docs/kuchentheke-konfiguration.md` |

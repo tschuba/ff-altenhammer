@@ -5,11 +5,11 @@ services:
     volumes:
       - token_data:/data
     environment:
-      - MICROSOFT_CLIENT_ID
-      - MICROSOFT_CLIENT_SECRET
-      - SECRET_KEY
-      - CALENDAR_NAME=Kuchentheke
-      - BASE_URL=https://buchung.feuerwehr.altenhammer.bayern
+      - MICROSOFT_CLIENT_ID=${MICROSOFT_CLIENT_ID}
+      - MICROSOFT_CLIENT_SECRET=${MICROSOFT_CLIENT_SECRET}
+      - SECRET_KEY=${SECRET_KEY}
+      - CALENDAR_NAME=${CALENDAR_NAME:-Kuchentheke}
+      - BASE_URL=${BASE_URL:-https://ff-buchung.schubs.net}
     # Coolify setzt Port + Traefik-Labels automatisch
     # Domain im Coolify-UI auf buchung.feuerwehr.altenhammer.bayern setzen
 
