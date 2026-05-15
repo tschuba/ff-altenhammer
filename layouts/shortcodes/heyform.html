@@ -1,0 +1,14 @@
+{{ $id := .Get 0 }}
+{{ $baseUrl := site.Params.heyformBaseUrl }}
+<div
+  data-heyform-id="{{ $id }}"
+  data-heyform-type="standard"
+  data-heyform-custom-url="{{ $baseUrl }}/form/{{ $id }}"
+  data-heyform-width-type="%"
+  data-heyform-width="100"
+  data-heyform-height-type="px"
+  data-heyform-height="500"
+  data-heyform-auto-resize-height="true"
+  data-heyform-transparent-background="true"
+></div>
+<script src="https://www.unpkg.com/@heyform-inc/embed@latest/dist/index.umd.js"></script>

@@ -19,11 +19,7 @@ Flossenbürger Str. 9
 
 ## Schreib uns
 
-<!-- HEYFORM-PLATZHALTER: iFrame wird eingetragen sobald HeyForm auf Coolify läuft -->
-
-Das Kontaktformular wird hier eingebunden, sobald unsere Formular-Infrastruktur eingerichtet ist.
-
-Bis dahin erreichst du uns direkt per E-Mail: [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)
+{{< heyform "KaiPEZNP" >}}
 
 ---
 

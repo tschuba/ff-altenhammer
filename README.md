@@ -101,10 +101,10 @@ Sobald IBAN bekannt: GiroCode-SVG generieren (EPC-Standard) und in `content/spen
 3. Outlook-Passwort im Coolify-UI unter Environment Variables eintragen (Schlüssel: `SMTP_PASSWORD`)
 4. Domain: `forms.feuerwehr.altenhammer.bayern`, Port `3000`
 5. Deployen → Admin-Account anlegen
-6. hCaptcha aktivieren: kostenlosen Account auf [hcaptcha.com](https://www.hcaptcha.com) anlegen, Keys in HeyForm-Einstellungen eintragen
+6. Google reCAPTCHA aktivieren (optional): Projekt auf [google.com/recaptcha/admin](https://www.google.com/recaptcha/admin) anlegen (reCAPTCHA v3, Domain `ff-forms.schubs.net`), dann `GOOGLE_RECAPTCHA_KEY` und `GOOGLE_RECAPTCHA_SECRET` in Coolify unter Environment Variables eintragen → neu deployen → pro Formular unter Settings → Protection aktivieren
 7. **Kontaktformular** anlegen: Felder Name, E-Mail, Nachricht — Betreff-Präfix `[FF-Kontakt]`
 8. **Spendenquittung-Formular** anlegen (alle Felder) — Betreff-Präfix `[FF-Spendenquittung]`
-9. Embed-Link beider Formulare in `content/kontakt.md` bzw. `content/spenden.md` eintragen
+9. ~~Embed-Link beider Formulare in `content/kontakt.md` bzw. `content/spenden.md` eintragen~~ ✓ erledigt (Shortcode `{{</* heyform "FORM-ID" */>}}`)
 
 #### Easy!Appointments (Kuchentheke-Buchung)
 

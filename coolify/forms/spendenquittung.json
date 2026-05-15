@@ -1,0 +1,259 @@
+{
+  "name": "FF Altenhammer – Spendenquittung",
+  "fields": [
+    {
+      "id": "yY1zZ2aA3bB4",
+      "title": "Vor- und Nachname",
+      "description": null,
+      "kind": "full_name",
+      "validations": {
+        "required": true,
+        "min": null,
+        "max": null,
+        "matchExpected": null
+      },
+      "properties": {
+        "showButton": null,
+        "buttonText": null,
+        "hideMarks": null,
+        "allowOther": null,
+        "allowMultiple": null,
+        "choices": null,
+        "other": null,
+        "shape": null,
+        "total": null,
+        "leftLabel": null,
+        "centerLabel": null,
+        "rightLabel": null,
+        "start": null,
+        "defaultCountryCode": null,
+        "currency": null,
+        "price": null,
+        "format": null,
+        "use12Hours": null,
+        "score": null
+      }
+    },
+    {
+      "id": "cC5dD6eE7fF8",
+      "kind": "text"
+    },
+    {
+      "id": "gG9hH0iI1jJ2",
+      "title": "Anschrift",
+      "description": "Straße, PLZ und Ort",
+      "kind": "address",
+      "validations": {
+        "required": true,
+        "min": null,
+        "max": null,
+        "matchExpected": null
+      },
+      "properties": {
+        "showButton": null,
+        "buttonText": null,
+        "hideMarks": null,
+        "allowOther": null,
+        "allowMultiple": null,
+        "choices": null,
+        "other": null,
+        "shape": null,
+        "total": null,
+        "leftLabel": null,
+        "centerLabel": null,
+        "rightLabel": null,
+        "start": null,
+        "defaultCountryCode": null,
+        "currency": null,
+        "price": null,
+        "format": null,
+        "use12Hours": null,
+        "score": null
+      }
+    },
+    {
+      "id": "kK3lL4mM5nN6",
+      "kind": "text"
+    },
+    {
+      "id": "oO7pP8qQ9rR0",
+      "title": "E-Mail-Adresse",
+      "description": "Für die digitale Zustellung der Quittung",
+      "kind": "email",
+      "validations": {
+        "required": true,
+        "min": null,
+        "max": null,
+        "matchExpected": null
+      },
+      "properties": {
+        "showButton": null,
+        "buttonText": null,
+        "hideMarks": null,
+        "allowOther": null,
+        "allowMultiple": null,
+        "choices": null,
+        "other": null,
+        "shape": null,
+        "total": null,
+        "leftLabel": null,
+        "centerLabel": null,
+        "rightLabel": null,
+        "start": null,
+        "defaultCountryCode": null,
+        "currency": null,
+        "price": null,
+        "format": null,
+        "use12Hours": null,
+        "score": null
+      }
+    },
+    {
+      "id": "sS1tT2uU3vV4",
+      "kind": "text"
+    },
+    {
+      "id": "wW5xX6yY7zZ8",
+      "title": "Spendenbetrag in €",
+      "description": null,
+      "kind": "short_text",
+      "validations": {
+        "required": true,
+        "min": null,
+        "max": null,
+        "matchExpected": null
+      },
+      "properties": {
+        "showButton": null,
+        "buttonText": null,
+        "hideMarks": null,
+        "allowOther": null,
+        "allowMultiple": null,
+        "choices": null,
+        "other": null,
+        "shape": null,
+        "total": null,
+        "leftLabel": null,
+        "centerLabel": null,
+        "rightLabel": null,
+        "start": null,
+        "defaultCountryCode": null,
+        "currency": null,
+        "price": null,
+        "format": null,
+        "use12Hours": null,
+        "score": null
+      }
+    },
+    {
+      "id": "aA9bB0cC1dD2",
+      "kind": "text"
+    },
+    {
+      "id": "eE3fF4gG5hH6",
+      "title": "Datum der Spende",
+      "description": null,
+      "kind": "date",
+      "validations": {
+        "required": true,
+        "min": null,
+        "max": null,
+        "matchExpected": null
+      },
+      "properties": {
+        "showButton": null,
+        "buttonText": null,
+        "hideMarks": null,
+        "allowOther": null,
+        "allowMultiple": null,
+        "choices": null,
+        "other": null,
+        "shape": null,
+        "total": null,
+        "leftLabel": null,
+        "centerLabel": null,
+        "rightLabel": null,
+        "start": null,
+        "defaultCountryCode": null,
+        "currency": null,
+        "price": null,
+        "format": "DD.MM.YYYY",
+        "use12Hours": null,
+        "score": null
+      }
+    },
+    {
+      "id": "iI7jJ8kK9lL0",
+      "kind": "text"
+    },
+    {
+      "id": "mM1nN2oO3pP4",
+      "title": "Zahlungsweise",
+      "description": null,
+      "kind": "single_choice",
+      "validations": {
+        "required": true,
+        "min": null,
+        "max": null,
+        "matchExpected": null
+      },
+      "properties": {
+        "showButton": null,
+        "buttonText": null,
+        "hideMarks": null,
+        "allowOther": null,
+        "allowMultiple": false,
+        "choices": [
+          {
+            "id": "ch01",
+            "label": "Überweisung",
+            "image": null,
+            "score": null,
+            "isExpected": null
+          },
+          {
+            "id": "ch02",
+            "label": "Lastschrift",
+            "image": null,
+            "score": null,
+            "isExpected": null
+          },
+          {
+            "id": "ch03",
+            "label": "Bar",
+            "image": null,
+            "score": null,
+            "isExpected": null
+          }
+        ],
+        "other": null,
+        "shape": null,
+        "total": null,
+        "leftLabel": null,
+        "centerLabel": null,
+        "rightLabel": null,
+        "start": null,
+        "defaultCountryCode": null,
+        "currency": null,
+        "price": null,
+        "format": null,
+        "use12Hours": null,
+        "score": null
+      }
+    }
+  ],
+  "hiddenFields": [],
+  "translations": {},
+  "logics": [],
+  "variables": [],
+  "themeSettings": {
+    "theme": {
+      "fontFamily": "Public Sans",
+      "questionTextColor": "#3F3F46",
+      "answerTextColor": "#3F3F46",
+      "buttonBackground": "#CC0000",
+      "buttonTextColor": "#ffffff",
+      "backgroundColor": "#ffffff"
+    }
+  }
+}

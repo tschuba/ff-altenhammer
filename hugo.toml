@@ -11,8 +11,9 @@ buildFuture = true
   jubilaeum           = true
   facebookUrl         = "https://www.facebook.com/profile.php?id=100061266252902"
   instagramUrl        = "https://www.instagram.com/ffw_altenhammer"
-heyformKontakt      = ""
-  heyformSpende       = ""
+heyformKontakt      = "KaiPEZNP"
+  heyformSpende       = "FAzpiAxb"
+  heyformBaseUrl      = "https://ff-forms.schubs.net"
   easyAppointmentsUrl = "https://buchung.feuerwehr.altenhammer.bayern"
 
 [build]
