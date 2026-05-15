@@ -1,0 +1,11 @@
+{{ $url := site.Params.easyAppointmentsUrl }}
+{{ with .Get "service" }}{{ $url = printf "%s?service=%s" $url . }}{{ end }}
+<div style="overflow:hidden;height:800px;">
+  <iframe
+    src="{{ $url }}"
+    style="width:100%;border:none;display:block;margin-top:-252px;"
+    height="1052"
+    loading="lazy"
+    title="Kuchentheke buchen"
+  ></iframe>
+</div>

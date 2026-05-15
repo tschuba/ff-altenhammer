@@ -23,10 +23,4 @@ Unsere Kuchentheke kann für private und gewerbliche Veranstaltungen gemietet we
 
 ## Verfügbarkeit prüfen & anfragen
 
-<!-- EASYAPPOINTMENTS-PLATZHALTER: Buchungs-Widget wird eingetragen sobald Easy!Appointments auf Coolify läuft -->
-
-Das Buchungs-Widget wird hier eingebunden, sobald unsere Buchungsinfrastruktur eingerichtet ist.
-
-Bis dahin bitte direkt anfragen:  
-**Telefon:** 09603 92060  
-**E-Mail:** [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)
+{{< easyappointments >}}
