@@ -111,8 +111,52 @@
   </div>
 </section>
 
-{{/* ── 5. NÄCHSTE TERMINE ── */}}
+{{/* ── 5. KINDERFEUERWEHR-TEASER ── */}}
+<section class="py-16 px-4 bg-primary text-white">
+  <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-shrink-0">
+      <img src="{{ "images/logo-loeschzwerge.png" | relURL }}" alt="Hammerer Löschzwerge" class="h-36 w-auto drop-shadow-lg">
+    </div>
+    <div>
+      <p class="font-headline text-sm uppercase tracking-widest text-red-200 mb-1">Nachwuchs</p>
+      <h2 class="font-headline text-3xl font-bold mb-3">Kinderfeuerwehr Altenhammer</h2>
+      <p class="text-red-100 leading-relaxed mb-6 max-w-lg">
+        Für Kinder ab 6 Jahren — spielerisch und sicher die Feuerwehr entdecken. Wir freuen uns über jeden neuen Nachwuchs!
+      </p>
+      <a href="{{ "kinderfeuerwehr/" | relURL }}" class="inline-block bg-white text-primary font-headline font-bold px-6 py-2.5 rounded hover:bg-gray-100 transition-colors">
+        Mehr erfahren
+      </a>
+    </div>
+  </div>
+</section>
+
+{{/* ── 6. MITMACHEN-TEASER ── */}}
 <section class="py-16 px-4 bg-surface">
+  <div class="max-w-4xl mx-auto">
+    <p class="font-headline text-sm text-primary uppercase tracking-widest mb-2 text-center">Mitmachen</p>
+    <h2 class="font-headline text-3xl font-bold text-dark mb-3 text-center">Werde Teil der Feuerwehr</h2>
+    <p class="text-gray-600 text-center mb-10 max-w-xl mx-auto">
+      Ob aktiver Einsatzdienst oder als Fördermitglied — jede Form der Unterstützung zählt.
+    </p>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-sm">
+        <div class="font-headline text-primary text-sm uppercase tracking-widest mb-1">Aktiv</div>
+        <h3 class="font-headline text-xl font-bold text-dark mb-3">Einsatzkraft werden</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Ab 16 Jahren. Übungen, Ausbildung, Einsätze. {{ .Site.Params.aktiveMitglieder }} aktive Mitglieder zählen wir heute.</p>
+        <a href="{{ "mitmachen/#aktiv" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
+      </div>
+      <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-sm">
+        <div class="font-headline text-gray-500 text-sm uppercase tracking-widest mb-1">Fördernd</div>
+        <h3 class="font-headline text-xl font-bold text-dark mb-3">Fördermitglied werden</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Unterstütze uns mit einer Mitgliedschaft im Verein. {{ .Site.Params.foerdermitglieder }} Fördermitglieder stärken uns bereits den Rücken.</p>
+        <a href="{{ "mitmachen/#foerdernd" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── 7. NÄCHSTE TERMINE ── */}}
+<section class="py-16 px-4 bg-white">
   <div class="max-w-4xl mx-auto">
     <p class="font-headline text-sm text-primary uppercase tracking-widest mb-2">Veranstaltungen</p>
     <h2 class="font-headline text-3xl font-bold text-dark mb-8">Nächste Termine</h2>
@@ -155,26 +199,25 @@
   </div>
 </section>
 
-{{/* ── 6. KINDERFEUERWEHR-TEASER ── */}}
-<section class="py-16 px-4 bg-primary text-white">
-  <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
-    <div class="flex-shrink-0">
-      <img src="{{ "images/logo-loeschzwerge.png" | relURL }}" alt="Hammerer Löschzwerge" class="h-36 w-auto drop-shadow-lg">
+{{/* ── 8. STAMMTISCH-TEASER ── */}}
+<section class="py-16 px-4 bg-surface">
+  <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8">
+    <div class="flex-shrink-0 w-14 h-14 bg-primary rounded-full flex items-center justify-center">
+      <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
     </div>
     <div>
-      <p class="font-headline text-sm uppercase tracking-widest text-red-200 mb-1">Nachwuchs</p>
-      <h2 class="font-headline text-3xl font-bold mb-3">Kinderfeuerwehr Altenhammer</h2>
-      <p class="text-red-100 leading-relaxed mb-6 max-w-lg">
-        Für Kinder ab 6 Jahren — spielerisch und sicher die Feuerwehr entdecken. Wir freuen uns über jeden neuen Nachwuchs!
+      <p class="font-headline text-sm text-primary uppercase tracking-widest mb-1">Jeden Donnerstag · ab 19 Uhr</p>
+      <h2 class="font-headline text-2xl font-bold text-dark mb-2">Stammtisch im Feuerwehrhaus</h2>
+      <p class="text-gray-600 leading-relaxed">
+        Gemütliches Zusammensitzen, eine Runde Karten spielen oder einfach Abschalten —
+        jeder ist willkommen, ganz ohne Anmeldung. Gegen eine kleine Spende gibt es Getränke in entspannter Atmosphäre.
       </p>
-      <a href="{{ "kinderfeuerwehr/" | relURL }}" class="inline-block bg-white text-primary font-headline font-bold px-6 py-2.5 rounded hover:bg-gray-100 transition-colors">
-        Mehr erfahren
-      </a>
+      <p class="text-sm text-gray-400 mt-2">FFW-Haus Altenhammer</p>
     </div>
   </div>
 </section>
 
-{{/* ── 7. KUCHENTHEKE-TEASER ── */}}
+{{/* ── 9. KUCHENTHEKE-TEASER ── */}}
 <section class="py-16 px-4 bg-white">
   <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8">
     <div class="flex-shrink-0 text-5xl select-none" aria-hidden="true">🎂</div>
@@ -191,32 +234,7 @@
   </div>
 </section>
 
-{{/* ── 8. MITMACHEN-TEASER ── */}}
-<section class="py-16 px-4 bg-surface">
-  <div class="max-w-4xl mx-auto">
-    <p class="font-headline text-sm text-primary uppercase tracking-widest mb-2 text-center">Mitmachen</p>
-    <h2 class="font-headline text-3xl font-bold text-dark mb-3 text-center">Werde Teil der Feuerwehr</h2>
-    <p class="text-gray-600 text-center mb-10 max-w-xl mx-auto">
-      Ob aktiver Einsatzdienst oder als Fördermitglied — jede Form der Unterstützung zählt.
-    </p>
-    <div class="grid sm:grid-cols-2 gap-6">
-      <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-sm">
-        <div class="font-headline text-primary text-sm uppercase tracking-widest mb-1">Aktiv</div>
-        <h3 class="font-headline text-xl font-bold text-dark mb-3">Einsatzkraft werden</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">Ab 16 Jahren. Übungen, Ausbildung, Einsätze. {{ .Site.Params.aktiveMitglieder }} aktive Mitglieder zählen wir heute.</p>
-        <a href="{{ "mitmachen/#aktiv" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
-      </div>
-      <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-sm">
-        <div class="font-headline text-gray-500 text-sm uppercase tracking-widest mb-1">Fördernd</div>
-        <h3 class="font-headline text-xl font-bold text-dark mb-3">Fördermitglied werden</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">Unterstütze uns mit einer Mitgliedschaft im Verein. {{ .Site.Params.foerdermitglieder }} Fördermitglieder stärken uns bereits den Rücken.</p>
-        <a href="{{ "mitmachen/#foerdernd" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{/* ── 9. SOCIAL MEDIA BANNER ── */}}
+{{/* ── 10. SOCIAL MEDIA BANNER ── */}}
 <section class="py-14 px-4 bg-dark text-white text-center">
   <div class="max-w-2xl mx-auto">
     <h2 class="font-headline text-2xl font-bold mb-3">Alles Aktuelle auf Social Media</h2>

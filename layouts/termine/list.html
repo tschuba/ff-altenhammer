@@ -6,6 +6,27 @@
 </section>
 
 <div class="max-w-4xl mx-auto px-4 py-12">
+  {{ $dauertermine := where .Pages "Params.recurring" true }}
+  {{ if $dauertermine }}
+  <h2 class="font-headline text-2xl font-bold text-dark mb-6">Regelmäßige Veranstaltungen</h2>
+  <div class="space-y-4 mb-12">
+    {{ range $dauertermine }}
+    <div class="bg-white rounded-xl p-5 flex flex-col sm:flex-row sm:items-start gap-4 shadow-sm border border-gray-100" style="border-left: 4px solid var(--color-primary, #cc0000);">
+      <div class="flex-shrink-0 bg-primary rounded-lg text-white text-center w-16 py-3 flex items-center justify-center">
+        <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+      </div>
+      <div class="flex-grow">
+        <div class="font-headline font-bold text-dark text-lg leading-tight">{{ .Title }}</div>
+        <div class="text-sm text-gray-500 mt-1">
+          Jeden {{ .Params.wochentag }} · {{ .Params.uhrzeit }}{{ with .Params.ort }} · {{ . }}{{ end }}
+        </div>
+        {{ with .Content }}<div class="prose prose-sm mt-2 max-w-none text-gray-600">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
   {{ $cutoff := now.AddDate 0 0 -14 }}
   {{ $alle := where .Pages "Date" "gt" $cutoff }}
   {{ $kommend := where $alle "Date" "gt" now }}
