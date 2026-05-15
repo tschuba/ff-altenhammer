@@ -14,7 +14,7 @@ buildFuture = true
 heyformKontakt      = "KaiPEZNP"
   heyformSpende       = "FAzpiAxb"
   heyformBaseUrl      = "https://ff-forms.schubs.net"
-  easyAppointmentsUrl = "https://ff-buchung.schubs.net"
+  kuchenthekenUrl     = "https://buchung.feuerwehr.altenhammer.bayern"
 
 [build]
   writeStats = true

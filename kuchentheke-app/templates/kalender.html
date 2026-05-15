@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/locales/de.global.min.js"></script>
+<style>
+  :root {
+    --fc-border-color: #e5e7eb;
+    --fc-today-bg-color: #fef2f2;
+    --fc-event-bg-color: #CC0000;
+    --fc-event-border-color: #990000;
+    --fc-button-bg-color: #CC0000;
+    --fc-button-border-color: #990000;
+    --fc-button-hover-bg-color: #990000;
+    --fc-button-active-bg-color: #990000;
+  }
+  .fc-event { cursor: default; }
+  .fc-event-title { font-family: 'Inter', sans-serif; font-size: 0.75rem; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="p-4 max-w-3xl mx-auto">
+
+  <!-- Toggle -->
+  <div class="flex gap-2 mb-4">
+    <button id="btn-kalender"
+      onclick="showView('kalender')"
+      class="px-4 py-2 rounded font-body text-sm font-medium bg-primary text-white">
+      📅 Kalender
+    </button>
+    <button id="btn-liste"
+      onclick="showView('liste')"
+      class="px-4 py-2 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200">
+      📋 Liste
+    </button>
+  </div>
+
+  <!-- Kalender-View -->
+  <div id="view-kalender">
+    <div id="calendar"></div>
+  </div>
+
+  <!-- Listen-View -->
+  <div id="view-liste" class="hidden">
+    {% if buchungen %}
+      <div class="divide-y divide-gray-100 rounded border border-gray-200 bg-white overflow-hidden">
+        {% for b in buchungen %}
+        <div class="px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+          <div>
+            <span class="font-medium text-dark">{{ b.title }}</span>
+          </div>
+          <div class="text-sm text-gray-500">
+            {{ b.start_fmt }} – {{ b.end_fmt }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-gray-500 text-sm">Keine Buchungen eingetragen.</p>
+    {% endif %}
+  </div>
+
+</div>
+
+<script>
+  const buchungen = {{ buchungen_json | safe }};
+
+  function showView(view) {
+    document.getElementById('view-kalender').classList.toggle('hidden', view !== 'kalender');
+    document.getElementById('view-liste').classList.toggle('hidden', view !== 'liste');
+    document.getElementById('btn-kalender').className =
+      view === 'kalender'
+        ? 'px-4 py-2 rounded font-body text-sm font-medium bg-primary text-white'
+        : 'px-4 py-2 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200';
+    document.getElementById('btn-liste').className =
+      view === 'liste'
+        ? 'px-4 py-2 rounded font-body text-sm font-medium bg-primary text-white'
+        : 'px-4 py-2 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200';
+    if (view === 'kalender') calendar.render();
+  }
+
+  const calendarEl = document.getElementById('calendar');
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    locale: 'de',
+    initialView: 'dayGridMonth',
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: '',
+    },
+    events: buchungen,
+    eventDisplay: 'block',
+    displayEventTime: false,
+    height: 'auto',
+  });
+  calendar.render();
+</script>
+{% endblock %}

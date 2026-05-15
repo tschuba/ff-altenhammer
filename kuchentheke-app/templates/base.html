@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Kuchentheke{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CC0000',
+            'primary-dark': '#990000',
+            gold: '#F0A500',
+            dark: '#1C1C1C',
+            surface: '#F8F8F8',
+          },
+          fontFamily: {
+            headline: ['Oswald', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Oswald', sans-serif; }
+  </style>
+  {% block head %}{% endblock %}
+</head>
+<body class="bg-surface text-dark">
+  {% block content %}{% endblock %}
+</body>
+</html>

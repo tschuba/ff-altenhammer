@@ -1,0 +1,17 @@
+services:
+  kuchentheke:
+    image: ghcr.io/tschuba/kuchentheke-app:latest
+    restart: unless-stopped
+    volumes:
+      - token_data:/data
+    environment:
+      - MICROSOFT_CLIENT_ID
+      - MICROSOFT_CLIENT_SECRET
+      - SECRET_KEY
+      - CALENDAR_NAME=Kuchentheke
+      - BASE_URL=https://buchung.feuerwehr.altenhammer.bayern
+    # Coolify setzt Port + Traefik-Labels automatisch
+    # Domain im Coolify-UI auf buchung.feuerwehr.altenhammer.bayern setzen
+
+volumes:
+  token_data:
