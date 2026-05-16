@@ -10,8 +10,8 @@ CLIENT_SECRET = os.getenv("MICROSOFT_CLIENT_SECRET")
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
 REDIRECT_URI = f"{BASE_URL}/auth/callback"
 
-AUTHORIZE_URL = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
-TOKEN_URL = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+AUTHORIZE_URL = "https://login.microsoftonline.com/consumers/oauth2/v2.0/authorize"
+TOKEN_URL = "https://login.microsoftonline.com/consumers/oauth2/v2.0/token"
 SCOPE = "Calendars.Read offline_access"
 
 # In-Memory State-Store (reicht für single-instance Setup-Flow)
