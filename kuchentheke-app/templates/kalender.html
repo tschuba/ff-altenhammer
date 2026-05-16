@@ -10,31 +10,47 @@
     --fc-today-bg-color: #fef2f2;
     --fc-event-bg-color: #CC0000;
     --fc-event-border-color: #990000;
-    --fc-button-bg-color: #CC0000;
-    --fc-button-border-color: #990000;
-    --fc-button-hover-bg-color: #990000;
-    --fc-button-active-bg-color: #990000;
   }
   .fc-event { cursor: default; }
   .fc-event-title { font-family: 'Inter', sans-serif; font-size: 0.75rem; }
+  .fc-daygrid-day-frame { min-height: 2.2rem !important; padding: 1px 2px !important; }
+  .fc-col-header-cell-cushion { padding: 2px 4px !important; font-size: 0.75rem; }
+  .fc-daygrid-day-number { font-size: 0.75rem; padding: 2px 4px !important; }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="p-4 max-w-3xl mx-auto">
 
-  <!-- Toggle -->
-  <div class="flex gap-2 mb-4">
-    <button id="btn-kalender"
-      onclick="showView('kalender')"
-      class="px-4 py-2 rounded font-body text-sm font-medium bg-primary text-white">
-      📅 Kalender
-    </button>
-    <button id="btn-liste"
-      onclick="showView('liste')"
-      class="px-4 py-2 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200">
-      📋 Liste
-    </button>
+  <!-- Unified Toolbar -->
+  <div class="flex items-center justify-between mb-3 gap-2">
+    <div class="flex gap-1">
+      <button id="btn-kalender"
+        onclick="showView('kalender')"
+        class="px-3 py-1.5 rounded font-body text-sm font-medium bg-primary text-white">
+        📅 Kalender
+      </button>
+      <button id="btn-liste"
+        onclick="showView('liste')"
+        class="px-3 py-1.5 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200">
+        📋 Liste
+      </button>
+    </div>
+    <div id="cal-nav" class="flex items-center gap-1">
+      <button onclick="calPrev()"
+        class="px-2 py-1.5 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200 leading-none">
+        ‹
+      </button>
+      <span id="cal-title" class="font-body text-sm font-medium text-dark px-1 min-w-[6rem] text-center"></span>
+      <button onclick="calNext()"
+        class="px-2 py-1.5 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200 leading-none">
+        ›
+      </button>
+      <button onclick="calToday()"
+        class="px-3 py-1.5 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200">
+        Heute
+      </button>
+    </div>
   </div>
 
   <!-- Kalender-View -->
@@ -48,17 +64,13 @@
       <div class="divide-y divide-gray-100 rounded border border-gray-200 bg-white overflow-hidden">
         {% for b in buchungen %}
         <div class="px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-          <div>
-            <span class="font-medium text-dark">{{ b.title }}</span>
-          </div>
-          <div class="text-sm text-gray-500">
-            {{ b.start_fmt }} – {{ b.end_fmt }}
-          </div>
+          <span class="font-medium text-dark">{{ b.title }}</span>
+          <span class="text-sm text-gray-500">{{ b.start_fmt }} – {{ b.end_fmt }}</span>
         </div>
         {% endfor %}
       </div>
     {% else %}
-      <p class="text-gray-500 text-sm">Keine Buchungen eingetragen.</p>
+      <p class="text-gray-500 text-sm">Keine Buchungen vorhanden.</p>
     {% endif %}
   </div>
 
@@ -66,18 +78,27 @@
 
 <script>
   const buchungen = {{ buchungen_json | safe }};
+  const MONATE = ['Januar','Februar','März','April','Mai','Juni',
+                  'Juli','August','September','Oktober','November','Dezember'];
+
+  const BTN_ACTIVE   = 'px-3 py-1.5 rounded font-body text-sm font-medium bg-primary text-white';
+  const BTN_INACTIVE = 'px-3 py-1.5 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200';
+
+  function updateTitle() {
+    const d = calendar.getDate();
+    document.getElementById('cal-title').textContent = MONATE[d.getMonth()] + ' ' + d.getFullYear();
+  }
+
+  function calPrev()  { calendar.prev();  updateTitle(); }
+  function calNext()  { calendar.next();  updateTitle(); }
+  function calToday() { calendar.today(); updateTitle(); }
 
   function showView(view) {
     document.getElementById('view-kalender').classList.toggle('hidden', view !== 'kalender');
     document.getElementById('view-liste').classList.toggle('hidden', view !== 'liste');
-    document.getElementById('btn-kalender').className =
-      view === 'kalender'
-        ? 'px-4 py-2 rounded font-body text-sm font-medium bg-primary text-white'
-        : 'px-4 py-2 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200';
-    document.getElementById('btn-liste').className =
-      view === 'liste'
-        ? 'px-4 py-2 rounded font-body text-sm font-medium bg-primary text-white'
-        : 'px-4 py-2 rounded font-body text-sm font-medium bg-white text-dark border border-gray-200';
+    document.getElementById('cal-nav').classList.toggle('hidden', view !== 'kalender');
+    document.getElementById('btn-kalender').className = view === 'kalender' ? BTN_ACTIVE : BTN_INACTIVE;
+    document.getElementById('btn-liste').className    = view === 'liste'    ? BTN_ACTIVE : BTN_INACTIVE;
     if (view === 'kalender') calendar.render();
   }
 
@@ -85,16 +106,13 @@
   const calendar = new FullCalendar.Calendar(calendarEl, {
     locale: 'de',
     initialView: 'dayGridMonth',
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: '',
-    },
+    headerToolbar: false,
     events: buchungen,
     eventDisplay: 'block',
     displayEventTime: false,
     height: 'auto',
   });
   calendar.render();
+  updateTitle();
 </script>
 {% endblock %}

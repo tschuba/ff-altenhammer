@@ -14,12 +14,16 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 
+_MONATE = ['Jan.','Feb.','März','Apr.','Mai','Juni',
+           'Juli','Aug.','Sep.','Okt.','Nov.','Dez.']
+
 def _fmt_dt(iso: str, all_day: bool) -> str:
     try:
         dt = datetime.fromisoformat(iso)
+        monat = _MONATE[dt.month - 1]
         if all_day:
-            return dt.strftime("%-d. %b %Y")
-        return dt.strftime("%-d. %b %Y, %H:%M Uhr")
+            return f"{dt.day}. {monat} {dt.year}"
+        return f"{dt.day}. {monat} {dt.year}, {dt.strftime('%H:%M')} Uhr"
     except Exception:
         return iso
 
