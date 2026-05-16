@@ -6,7 +6,7 @@ import httpx
 from token_store import load_token, save_token
 
 GRAPH_BASE = "https://graph.microsoft.com/v1.0"
-TOKEN_URL = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+TOKEN_URL = "https://login.microsoftonline.com/consumers/oauth2/v2.0/token"
 CALENDAR_NAME = os.getenv("CALENDAR_NAME", "Kuchentheke")
 CLIENT_ID = os.getenv("MICROSOFT_CLIENT_ID")
 CLIENT_SECRET = os.getenv("MICROSOFT_CLIENT_SECRET")
