@@ -24,3 +24,7 @@ Unsere Kuchentheke kann für private und gewerbliche Veranstaltungen gemietet we
 ## Verfügbarkeit prüfen & anfragen
 
 {{< buchung >}}
+
+## Anfragen
+
+{{< heyform "sxoVPOnf" >}}
