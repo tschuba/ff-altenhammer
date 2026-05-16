@@ -105,24 +105,17 @@ Sobald IBAN bekannt: GiroCode-SVG generieren (EPC-Standard) und in `content/spen
 7. **Kontaktformular** anlegen: Felder Name, E-Mail, Nachricht — Betreff-Präfix `[FF-Kontakt]`
 8. **Spendenquittung-Formular** anlegen (alle Felder) — Betreff-Präfix `[FF-Spendenquittung]`
 9. ~~Embed-Link beider Formulare in `content/kontakt.md` bzw. `content/spenden.md` eintragen~~ ✓ erledigt (Shortcode `{{</* heyform "FORM-ID" */>}}`)
+10. ~~Kuchentheke-Formular in `content/kuchentheke.md` eintragen~~ ✓ erledigt (Form-ID: `sxoVPOnf`)
 
-#### Kuchentheke Buchungs-App
+#### ~~Kuchentheke Buchungs-App~~ ✓ erledigt
 
-1. Coolify → Projekt „FF Altenhammer" → Neuer Service → Docker Compose → `coolify/kuchentheke.compose.yml`
-2. Domain: `buchung.feuerwehr.altenhammer.bayern`
-3. Image `ghcr.io/tschuba/kuchentheke-app:latest` wird automatisch per GitHub Actions gebaut
-4. Umgebungsvariablen im Coolify-UI setzen:
+~~1. Coolify → Projekt „FF Altenhammer" → Neuer Service → Docker Compose → `coolify/kuchentheke.compose.yml`~~
+~~2. Domain: `ff-buchung.schubs.net`~~
+~~3. Image `ghcr.io/tschuba/kuchentheke-app:latest` wird automatisch per GitHub Actions gebaut~~
+~~4. Umgebungsvariablen im Coolify-UI setzen~~
+~~5. Service starten → einmalig `https://ff-buchung.schubs.net/setup` aufrufen und mit `ff-altenhammer@outlook.com` autorisieren~~
 
-   | Variable | Wert |
-   | --- | --- |
-   | `MICROSOFT_CLIENT_ID` | Azure App Registration → siehe [docs/kuchentheke-konfiguration.md](docs/kuchentheke-konfiguration.md) |
-   | `MICROSOFT_CLIENT_SECRET` | Azure App Registration → siehe [docs/kuchentheke-konfiguration.md](docs/kuchentheke-konfiguration.md) |
-   | `SECRET_KEY` | Zufälliger 32-Zeichen-String (`openssl rand -hex 16`) |
-   | `CALENDAR_NAME` | `Kuchentheke` |
-   | `BASE_URL` | `https://buchung.feuerwehr.altenhammer.bayern` |
-
-5. Service starten → einmalig `https://buchung.feuerwehr.altenhammer.bayern/setup` aufrufen und mit `ff-altenhammer@outlook.com` autorisieren
-6. Vollständige Anleitung (Azure App Registration, Outlook-Kalender, Troubleshooting): `docs/kuchentheke-konfiguration.md`
+Vollständige Anleitung: [docs/kuchentheke-konfiguration.md](docs/kuchentheke-konfiguration.md)
 
 #### Traefik Rate Limiting (nach Deployment)
 
@@ -166,7 +159,7 @@ Die Site ist immer unter `tschuba.github.io/ff-altenhammer` erreichbar. Die Cust
 | CNAME | `feuerwehr` | `tschuba.github.io.` | GitHub Pages Hauptdomain |
 | CNAME | `www.feuerwehr` | `tschuba.github.io.` | www-Weiterleitung |
 | CNAME | `forms.feuerwehr` | `schubs.net.` | HeyForm (Coolify/Raspi) |
-| CNAME | `buchung.feuerwehr` | `schubs.net.` | Kuchentheke App (Coolify/Raspi) |
+| CNAME | `buchung.feuerwehr` | `schubs.net.` | Kuchentheke App — *aktuell nicht verwendet, App läuft unter `ff-buchung.schubs.net`* |
 
 `schubs.net` zeigt via DynDNS auf den Raspberry Pi — CNAMEs folgen automatisch bei IP-Wechsel.
 

@@ -29,7 +29,7 @@ Die Kuchentheke-App zeigt auf der Website einen Verfügbarkeitskalender an, der 
 5. Formular ausfüllen:
    - Name: `FF Altenhammer Kuchentheke`
    - Unterstützte Kontotypen: **"Persönliche Microsoft-Konten"**
-   - Umleitungs-URI: `https://buchung.feuerwehr.altenhammer.bayern/auth/callback`
+   - Umleitungs-URI: `https://ff-buchung.schubs.net/auth/callback`
 6. **Registrieren** klicken
 
 ### CLIENT_ID notieren
@@ -51,7 +51,7 @@ Nach der Registrierung auf der Übersichtsseite:
 
 1. Coolify öffnen → **"New Service"** → **"Docker Compose"**
 2. Compose-Datei: Inhalt von `coolify/kuchentheke.compose.yml` einfügen
-3. Domain: `buchung.feuerwehr.altenhammer.bayern`
+3. Domain: `ff-buchung.schubs.net`
 4. Umgebungsvariablen setzen:
 
 | Variable | Wert |
@@ -60,7 +60,7 @@ Nach der Registrierung auf der Übersichtsseite:
 | `MICROSOFT_CLIENT_SECRET` | Wert aus Schritt 2 |
 | `SECRET_KEY` | Zufälliger 32-Zeichen-String (z.B. mit `openssl rand -hex 16` generieren) |
 | `CALENDAR_NAME` | `Kuchentheke` |
-| `BASE_URL` | `https://buchung.feuerwehr.altenhammer.bayern` |
+| `BASE_URL` | `https://ff-buchung.schubs.net` |
 
 5. Service starten
 
@@ -68,7 +68,7 @@ Nach der Registrierung auf der Übersichtsseite:
 
 ## Schritt 4: Erster Setup (einmalig)
 
-1. Browser öffnen: `https://buchung.feuerwehr.altenhammer.bayern/setup`
+1. Browser öffnen: `https://ff-buchung.schubs.net/setup`
 2. **"Mit Microsoft autorisieren"** klicken
 3. Mit `ff-altenhammer@outlook.com` anmelden
 4. Berechtigungsanfrage bestätigen (Kalenderzugriff lesen)
@@ -118,7 +118,7 @@ Der Unterkalender "Kuchentheke" existiert nicht. Schritt 1 dieser Anleitung durc
 
 Falls die App aufhört Buchungen zu laden (passiert nach sehr langer Inaktivität):
 
-1. `https://buchung.feuerwehr.altenhammer.bayern/setup` aufrufen
+1. `https://ff-buchung.schubs.net/setup` aufrufen
 2. Erneut autorisieren
 
 ---
