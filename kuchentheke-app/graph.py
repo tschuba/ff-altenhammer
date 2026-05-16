@@ -70,7 +70,7 @@ async def get_buchungen() -> list[dict]:
     data = await _get(
         f"/me/calendars/{cal_id}/calendarView"
         f"?startDateTime={start}&endDateTime={end}"
-        f"&$select=subject,start,end,isAllDay"
+        f"&$select=start,end,isAllDay"
         f"&$orderby=start/dateTime"
         f"&$top=100"
     )
@@ -78,7 +78,7 @@ async def get_buchungen() -> list[dict]:
     buchungen = []
     for event in data.get("value", []):
         buchungen.append({
-            "title": event.get("subject", "Belegt"),
+            "title": "Gebucht",
             "start": event["start"]["dateTime"],
             "end": event["end"]["dateTime"],
             "allDay": event.get("isAllDay", False),
