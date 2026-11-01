@@ -21,10 +21,4 @@ Unsere Kuchentheke kann für private und gewerbliche Veranstaltungen gemietet we
 - Selbstabholung und Rückgabe am Feuerwehrhaus
 - Rückgabe gereinigt
 
-## Verfügbarkeit prüfen & anfragen
-
 {{< buchung >}}
-
-## Anfragen
-
-{{< heyform "sxoVPOnf" >}}
