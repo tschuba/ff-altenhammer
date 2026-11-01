@@ -11,8 +11,7 @@ Kinder ab **6 Jahren** aus Altenhammer und Umgebung sind herzlich willkommen. Ei
 
 Einfach beim nächsten Treffen vorbeikommen oder kurz melden:
 
-- Telefon: 09603 92060
-- E-Mail: [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)
+- E-Mail: [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern)
 
 ## Aufnahmeantrag
 

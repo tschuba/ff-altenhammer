@@ -37,8 +37,8 @@ Statt eines custom Microservices wird **HeyForm** (Open Source, selbst-gehostet)
 
 | Formular | Felder | Benachrichtigung an |
 | --- | --- | --- |
-| Kontaktformular | Name, E-Mail, Nachricht | `ff-altenhammer@outlook.com` (im HeyForm-UI änderbar) |
-| Spendenquittung-Anfrage | Vor-/Nachname, Straße, PLZ, Ort, E-Mail, Telefon (optional), Spendenbetrag, Datum der Überweisung, Verwendungszweck (optional) | `ff-altenhammer@outlook.com` (im HeyForm-UI änderbar) |
+| Kontaktformular | Name, E-Mail, Nachricht | `post@feuerwehr.altenhammer.bayern` (im HeyForm-UI änderbar) |
+| Spendenquittung-Anfrage | Vor-/Nachname, Straße, PLZ, Ort, E-Mail, Telefon (optional), Spendenbetrag, Datum der Überweisung, Verwendungszweck (optional) | `post@feuerwehr.altenhammer.bayern` (im HeyForm-UI änderbar) |
 
 ### Coolify-Deployment (HeyForm)
 
@@ -47,7 +47,7 @@ HeyForm benötigt: Node.js-App + MongoDB. Coolify stellt beides als Docker-Compo
 1. Coolify → Neues Projekt → "Docker Compose" → HeyForm-Compose einfügen
 2. MongoDB als Service im selben Compose-Stack
 3. Subdomain `forms.feuerwehr.altenhammer.bayern` → HeyForm-UI
-4. SMTP konfigurieren: `smtp-mail.outlook.com:587` + `ff-altenhammer@outlook.com`
+4. SMTP konfigurieren: `smtp-mail.outlook.com:587` + `post@feuerwehr.altenhammer.bayern`
 5. Formulare in der HeyForm-UI anlegen, Embed-Link/iFrame für die Hugo-Seiten kopieren
 
 ### DNS-Eintrag
@@ -64,7 +64,7 @@ forms.feuerwehr.altenhammer.bayern.  CNAME  schubs.net.
 1. Besucher füllt Formular auf Hugo-Seite aus (iFrame von forms.feuerwehr.altenhammer.bayern)
 2. HeyForm validiert Eingabe + prüft hCaptcha
 3. HeyForm speichert Einsendung in MongoDB
-4. HeyForm sendet E-Mail-Benachrichtigung an ff-altenhammer@outlook.com
+4. HeyForm sendet E-Mail-Benachrichtigung an post@feuerwehr.altenhammer.bayern
 5. HeyForm sendet Bestätigungsmail an Besucher
 6. Wehr antwortet direkt per E-Mail (Reply-To = Absender-Adresse des Besuchers)
    — Alle Einsendungen auch im HeyForm-Admin-UI einsehbar
@@ -86,20 +86,20 @@ HeyForm speichert Einsendungen in der MongoDB-Datenbank auf dem Coolify-Server (
 
 ### Sichtbarkeit der Empfängeradresse
 
-Die Empfängeradresse (`ff-altenhammer@outlook.com`) ist ausschließlich im Backend der Tools konfiguriert — sie wird **nicht** im iFrame oder Buchungs-Widget an Besucher angezeigt.
+Die Empfängeradresse (`post@feuerwehr.altenhammer.bayern`) ist ausschließlich im Backend der Tools konfiguriert — sie wird **nicht** im iFrame oder Buchungs-Widget an Besucher angezeigt.
 
 > **⚠ Beim Setup beachten:** In HeyForm und Easy!Appointments gibt es Freitextfelder für Formularbeschreibungen. Die Empfängeradresse darf dort **nicht** eingetragen werden.
 
-**Einzige unvermeidbare Sichtbarkeit:** Die Bestätigungsmail an den Besucher kommt FROM `ff-altenhammer@outlook.com` — Outlook erzwingt das. Der Besucher sieht die Adresse als Absender, wenn er die Eingangsbestätigung öffnet. Das ist technisch nicht lösbar ohne eigene Domain-Mail (s. Abschnitt "Absenderadresse").
+**Einzige unvermeidbare Sichtbarkeit:** Die Bestätigungsmail an den Besucher kommt FROM `post@feuerwehr.altenhammer.bayern` — Outlook erzwingt das. Der Besucher sieht die Adresse als Absender, wenn er die Eingangsbestätigung öffnet. Das ist technisch nicht lösbar ohne eigene Domain-Mail (s. Abschnitt "Absenderadresse").
 
-**Auf der Website:** `ff-altenhammer@outlook.com` erscheint **nirgendwo** für Besucher — alle Formulare (Kontakt, Spendenquittung, Kuchentheke) laufen über iFrames, die Empfängeradresse liegt ausschließlich im Backend.
+**Auf der Website:** `post@feuerwehr.altenhammer.bayern` erscheint **nirgendwo** für Besucher — alle Formulare (Kontakt, Spendenquittung, Kuchentheke) laufen über iFrames, die Empfängeradresse liegt ausschließlich im Backend.
 
 ### Absenderadresse bei ausgehenden E-Mails
 
 Der **Display-Name** ist in beiden Tools frei einstellbar — empfohlen:
-`Freiwillige Feuerwehr Altenhammer <ff-altenhammer@outlook.com>`
+`Freiwillige Feuerwehr Altenhammer <post@feuerwehr.altenhammer.bayern>`
 
-Die technische Absenderadresse muss identisch mit dem SMTP-Konto sein — Outlook erzwingt das. `ff-altenhammer@outlook.com` erscheint also immer als echte Absenderadresse.
+Die technische Absenderadresse muss identisch mit dem SMTP-Konto sein — Outlook erzwingt das. `post@feuerwehr.altenhammer.bayern` erscheint also immer als echte Absenderadresse.
 
 > **Langfristig:** Für eine eigene Adresse wie `info@feuerwehr.altenhammer.bayern` wäre ein Mailprovider mit Custom-Domain-Support nötig (z.B. Microsoft 365 ~5 €/Monat oder ein Hoster wie Strato/IONOS mit der Domain). Aktuell kein Handlungsbedarf — Display-Name-Lösung ist für Besucher vollkommen ausreichend.
 
@@ -131,7 +131,7 @@ Alle verfügbaren Optionen nach aufsteigendem Aufwand:
 Die eingebaute Sekretärin-Rolle kann als zweiter Admin-Empfänger angelegt werden. Beide bekommen separate E-Mails mit identischem Inhalt. Einrichtung im Easy!Appointments Admin-UI, ~2 Minuten.
 
 **Option B — Outlook-Regel nach Betreff (kein Code, beide Tools)**
-Da alle E-Mails von `ff-altenhammer@outlook.com` kommen, muss nach Betreff gefiltert werden. Beim Setup eindeutige Präfixe konfigurieren:
+Da alle E-Mails von `post@feuerwehr.altenhammer.bayern` kommen, muss nach Betreff gefiltert werden. Beim Setup eindeutige Präfixe konfigurieren:
 
 ```text
 Wenn Betreff enthält "[FF-Kontakt]"        → Kopie an [weitere Adresse]
@@ -597,7 +597,7 @@ buchung.feuerwehr.altenhammer.bayern.  CNAME  schubs.net.
 | Service | "Kuchentheke Verleih" |
 | Dauer | Ganztägig (oder 1–3 Tage je Buchung) |
 | Bestätigung | **Manuell** — Admin muss Anfrage bestätigen (kein Sofort-Buchen) |
-| E-Mail-Benachrichtigung | Bei neuer Anfrage → `ff-altenhammer@outlook.com` (jederzeit im Admin-UI änderbar, kein Redeploy) |
+| E-Mail-Benachrichtigung | Bei neuer Anfrage → `post@feuerwehr.altenhammer.bayern` (jederzeit im Admin-UI änderbar, kein Redeploy) |
 | Bestätigungs-Mail | Automatisch an Anfragenden: "Ihre Anfrage ist eingegangen. Dies ist **keine** Buchungsbestätigung." |
 | Stornierung | Automatischer Stornierungslink **deaktiviert** — Stornierungen laufen über das HeyForm-Kontaktformular (s.u.) |
 
@@ -611,7 +611,7 @@ Das Easy!Appointments Buchungs-Widget wird als iFrame in `content/kuchentheke.md
 1. Besucher wählt Wunschtermin im Widget auf der Hugo-Seite
 2. Besucher gibt Name, E-Mail, Telefon ein → sendet Anfrage
 3. Easy!Appointments speichert Anfrage als "Ausstehend"
-4. Easy!Appointments sendet Benachrichtigung an ff-altenhammer@outlook.com
+4. Easy!Appointments sendet Benachrichtigung an post@feuerwehr.altenhammer.bayern
 5. Easy!Appointments sendet Eingangsbestätigung an Besucher:
    "Ihre Anfrage ist eingegangen. Dies ist keine Buchungsbestätigung."
 6. Admin öffnet Easy!Appointments im Browser → sieht ausstehende Anfrage

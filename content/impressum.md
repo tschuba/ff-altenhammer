@@ -16,8 +16,7 @@ Flossenbürger Str. 9
 
 ## Kontakt
 
-E-Mail: [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)  
-Telefon: 09603 92060
+E-Mail: [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern)
 
 ## Vereinsregister
 
