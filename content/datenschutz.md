@@ -22,13 +22,13 @@ Weitere Informationen: [GitHub Privacy Statement](https://docs.github.com/en/sit
 
 Diese Website verwendet die Schriften **Oswald** und **Inter**, die auf unserem eigenen Server gespeichert und ausgeliefert werden. Es findet keine Verbindung zu externen Schriftdiensten (z. B. Google Fonts) statt.
 
-## 4. Kontaktformular
+## 4. Kontaktaufnahme per E-Mail
 
-Das Kontaktformular auf dieser Website wird über **HeyForm** bereitgestellt, das auf einem eigenen Server (schubs.net, Deutschland) betrieben wird. Wenn Sie das Formular nutzen, werden Ihre Angaben (Name, E-Mail-Adresse, Nachricht) auf diesem Server gespeichert und per E-Mail an uns weitergeleitet.
+Wenn Sie uns per E-Mail kontaktieren (auch für Spendenquittungen), speichern wir Ihre Angaben (z. B. Name, Anschrift, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage.
 
-Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung / berechtigtes Interesse).
+Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. lit. f (berechtigtes Interesse). Spendenquittungen: Art. 6 Abs. 1 lit. c DSGVO (steuerrechtliche Aufbewahrungspflicht).
 
-Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Sie können jederzeit die Löschung Ihrer gespeicherten Daten verlangen (s. Abschnitt 8).
+Ihre Daten werden nicht an Dritte weitergegeben. Sie können jederzeit die Löschung verlangen (s. Abschnitt 8), soweit keine Aufbewahrungspflichten entgegenstehen.
 
 ## 5. Kuchentheke-Buchung
 

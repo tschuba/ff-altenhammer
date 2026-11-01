@@ -19,9 +19,7 @@ Die Freiwillige Feuerwehr Altenhammer ist auf Spenden und Fördermitgliedschafte
 
 ## Spendenquittung
 
-Für Spenden ab **300 €** stellen wir gerne eine Spendenquittung aus. Bitte fülle dazu das Formular aus:
-
-{{< heyform "FAzpiAxb" >}}
+Für Spenden ab **300 €** stellen wir gerne eine Spendenquittung aus. Schreibe uns dazu eine E-Mail an [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern?subject=Spendenquittung) mit Name, Anschrift, Spendenbetrag und Datum der Überweisung.
 
 ---
 
