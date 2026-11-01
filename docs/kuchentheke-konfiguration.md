@@ -22,7 +22,7 @@ Die Kuchentheke-App zeigt auf der Website einen Verfügbarkeitskalender an, der 
 ## Schritt 2: Azure App Registration anlegen
 
 1. Browser öffnen: [portal.azure.com](https://portal.azure.com)
-2. Mit `ff-altenhammer@outlook.com` anmelden
+2. Mit `post@feuerwehr.altenhammer.bayern` anmelden
 3. Oben auf das **Lupen-Symbol** klicken → `App-Registrierungen` eintippen → ersten Treffer öffnen
    *(alternativ: linkes Menü → **Microsoft Entra ID** → linkes Untermenü → **App-Registrierungen**)*
 4. **"+ Neue Registrierung"** klicken
@@ -70,7 +70,7 @@ Nach der Registrierung auf der Übersichtsseite:
 
 1. Browser öffnen: `https://ff-buchung.schubs.net/setup`
 2. **"Mit Microsoft autorisieren"** klicken
-3. Mit `ff-altenhammer@outlook.com` anmelden
+3. Mit `post@feuerwehr.altenhammer.bayern` anmelden
 4. Berechtigungsanfrage bestätigen (Kalenderzugriff lesen)
 5. Weiterleitung zurück zur Setup-Seite → **"Autorisierung erfolgreich"**
 

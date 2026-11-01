@@ -235,7 +235,7 @@ def build_erwachsene():
          size=9.5)
     small(doc,
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). '
-          'Widerruf jederzeit möglich durch schriftliche Mitteilung an ff-altenhammer@outlook.com.')
+          'Widerruf jederzeit möglich durch schriftliche Mitteilung an post@feuerwehr.altenhammer.bayern.')
     doc.add_paragraph().paragraph_format.space_after = Pt(4)
     add_checkbox_line(doc, 'Ich stimme der Speicherung meiner Daten zu den genannten Zwecken zu.')
 
@@ -254,7 +254,7 @@ def build_erwachsene():
     # 5. Unterschrift
     heading(doc, '5. Unterschrift')
     add_two_col_fields(doc, 'Ort, Datum', 'Unterschrift')
-    small(doc, 'Bitte ausgefülltes Formular beim Vorstand abgeben oder per E-Mail an ff-altenhammer@outlook.com einsenden.')
+    small(doc, 'Bitte ausgefülltes Formular beim Vorstand abgeben oder per E-Mail an post@feuerwehr.altenhammer.bayern einsenden.')
 
     return doc
 
@@ -332,7 +332,7 @@ def build_minderjaehrige():
          size=9.5)
     small(doc,
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. '
-          'Widerruf jederzeit möglich durch schriftliche Mitteilung an ff-altenhammer@outlook.com.')
+          'Widerruf jederzeit möglich durch schriftliche Mitteilung an post@feuerwehr.altenhammer.bayern.')
     doc.add_paragraph().paragraph_format.space_after = Pt(4)
     add_checkbox_line(doc, 'Ich stimme der Speicherung der Daten meines Kindes zu den genannten Zwecken zu.')
 
@@ -351,7 +351,7 @@ def build_minderjaehrige():
     # 6. Unterschrift
     heading(doc, '6. Unterschrift der Erziehungsberechtigten')
     add_two_col_fields(doc, 'Ort, Datum', 'Unterschrift Erziehungsberechtigte/r')
-    small(doc, 'Bitte ausgefülltes Formular beim Vorstand abgeben oder per E-Mail an ff-altenhammer@outlook.com einsenden.')
+    small(doc, 'Bitte ausgefülltes Formular beim Vorstand abgeben oder per E-Mail an post@feuerwehr.altenhammer.bayern einsenden.')
 
     return doc
 

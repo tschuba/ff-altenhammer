@@ -23,7 +23,7 @@ Aktuell unterstützen uns **45 Fördermitglieder** — herzlichen Dank!
 
 ## Aufnahmeantrag
 
-Fülle das passende Formular aus und gib es beim Vorstand ab — oder sende es per E-Mail an [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com).
+Fülle das passende Formular aus und gib es beim Vorstand ab — oder sende es per E-Mail an [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern).
 
 | Formular | DOCX | PDF |
 |---|---|---|
@@ -34,6 +34,5 @@ Fülle das passende Formular aus und gib es beim Vorstand ab — oder sende es p
 
 Fragen? Meld dich einfach:
 
-- Telefon: 09603 92060
-- E-Mail: [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)
+- E-Mail: [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern)
 - Oder komm einfach zum nächsten Übungsabend vorbei — wir freuen uns!

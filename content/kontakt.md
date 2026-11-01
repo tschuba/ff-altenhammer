@@ -10,8 +10,7 @@ draft: false
 Flossenbürger Str. 9  
 92696 Flossenbürg
 
-**Telefon:** 09603 92060  
-**E-Mail:** [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)
+**E-Mail:** [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern)
 
 {{< extlink "https://osm.org/go/0JTlTqp_h?m=&node=1649696417" "Auf der Karte anzeigen (OpenStreetMap)" >}}
 

@@ -7,7 +7,7 @@ draft: false
 
 **Feuerwehrverein Altenhammer e.V.**  
 Flossenbürger Str. 9, 92696 Flossenbürg  
-E-Mail: [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)  
+E-Mail: [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern)  
 Vertreten durch: Florian Plödt (1. Vorstand)
 
 ## 2. Hosting — GitHub Pages
@@ -55,7 +55,7 @@ Sie haben gegenüber uns folgende Rechte bezüglich Ihrer personenbezogenen Date
 - **Datenübertragbarkeit** (Art. 20 DSGVO)
 - **Widerspruch** (Art. 21 DSGVO)
 
-Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: [ff-altenhammer@outlook.com](mailto:ff-altenhammer@outlook.com)
+Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern)
 
 Sie haben außerdem das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren:  
 **Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)**  

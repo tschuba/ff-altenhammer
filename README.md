@@ -113,7 +113,7 @@ Sobald IBAN bekannt: GiroCode-SVG generieren (EPC-Standard) und in `content/spen
 ~~2. Domain: `ff-buchung.schubs.net`~~
 ~~3. Image `ghcr.io/tschuba/kuchentheke-app:latest` wird automatisch per GitHub Actions gebaut~~
 ~~4. Umgebungsvariablen im Coolify-UI setzen~~
-~~5. Service starten → einmalig `https://ff-buchung.schubs.net/setup` aufrufen und mit `ff-altenhammer@outlook.com` autorisieren~~
+~~5. Service starten → einmalig `https://ff-buchung.schubs.net/setup` aufrufen und mit `post@feuerwehr.altenhammer.bayern` autorisieren~~
 
 Vollständige Anleitung: [docs/kuchentheke-konfiguration.md](docs/kuchentheke-konfiguration.md)
 

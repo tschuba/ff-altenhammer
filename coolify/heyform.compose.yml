@@ -10,7 +10,7 @@ services:
       SMTP_HOST: "smtp-mail.outlook.com"
       SMTP_PORT: "587"
       SMTP_TLS: "true"
-      SMTP_SENDER: "Freiwillige Feuerwehr Altenhammer <ff-altenhammer@outlook.com>"
+      SMTP_SENDER: "Freiwillige Feuerwehr Altenhammer <post@feuerwehr.altenhammer.bayern>"
       SMTP_USER: "ff-altenhammer@outlook.com"
       SMTP_PASSWORD: "OUTLOOK_PASSWORT_HIER_EINTRAGEN"
     depends_on:
