@@ -25,8 +25,8 @@ Registergericht: Amtsgericht Weiden i.d.OPf.
 
 ## Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV
 
-Florian Plödt  
-Flossenbürger Str. 9  
+Thomas Schulte-Bahrenberg  
+Kapellenberg 26  
 92696 Flossenbürg
 
 ## Haftungshinweis
