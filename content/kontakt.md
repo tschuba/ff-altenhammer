@@ -16,12 +16,6 @@ Flossenbürger Str. 9
 
 ---
 
-## Schreib uns
-
-{{< heyform "KaiPEZNP" >}}
-
----
-
 ## Notruf
 
 Bei einem Notfall bitte immer den **Notruf 112** wählen — nicht diese Website.
