@@ -1,0 +1,16 @@
+{{- /* Lokale Termine + on-duty-Termine, normalisiert (Date, Title, Ort, Text) und sortiert. Text ist HTML.
+       Dublette = gleicher Titel (case-insensitive) am selben Tag; on-duty gewinnt. */ -}}
+{{- $list := slice -}}
+{{- $seen := dict -}}
+{{- range (partialCached "onduty.html" "x").events -}}
+  {{- $tz := (time.AsTime "2026-01-01T00:00:00" "Europe/Berlin").Location -}}
+  {{- $d := (time.AsTime .startsAt).In $tz -}}
+  {{- $seen = merge $seen (dict (printf "%s|%s" ($d.Format "2006-01-02") (lower .title)) true) -}}
+  {{- $list = $list | append (dict "Date" $d "Title" .title "Ort" .location "Text" (.description | default "" | htmlEscape | safeHTML)) -}}
+{{- end -}}
+{{- range where (where site.RegularPages "Section" "termine") "Params.recurring" "ne" true -}}
+  {{- if not (index $seen (printf "%s|%s" (.Date.Format "2006-01-02") (lower .Title))) -}}
+    {{- $list = $list | append (dict "Date" .Date "Title" .Title "Ort" .Params.ort "Text" .Content) -}}
+  {{- end -}}
+{{- end -}}
+{{- return sort $list "Date" -}}

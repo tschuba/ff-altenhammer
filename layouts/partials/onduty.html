@@ -1,0 +1,10 @@
+{{- /* on-duty Public API (Build-Zeit). Liefert dict: stats, events. Bei Fehler leer -> Fallback auf Params/lokale Termine. */ -}}
+{{- $base := site.Params.ondutyUrl | default "https://on-duty.schubs.net" -}}
+{{- $out := dict "stats" dict "events" slice -}}
+{{- with try (resources.GetRemote (printf "%s/api/public/v1/stats" $base)) -}}
+  {{- if and .Value (not .Err) -}}{{- with transform.Unmarshal .Value }}{{ $out = merge $out (dict "stats" (.members | default dict)) }}{{ end -}}{{- else }}{{ warnf "on-duty stats: %v" .Err }}{{ end -}}
+{{- end -}}
+{{- with try (resources.GetRemote (printf "%s/api/public/v1/events?limit=20" $base)) -}}
+  {{- if and .Value (not .Err) -}}{{- with transform.Unmarshal .Value }}{{ $out = merge $out (dict "events" (.events | default slice)) }}{{ end -}}{{- else }}{{ warnf "on-duty events: %v" .Err }}{{ end -}}
+{{- end -}}
+{{- return $out -}}
