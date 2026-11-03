@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $od := partialCached "onduty.html" "x" }}
 {{ $aktive := index $od.stats "active" | default .Site.Params.aktiveMitglieder }}
+{{ $foerder := index $od.stats "supporting" | default .Site.Params.foerdermitglieder }}
 
 {{/* ── 1. HERO ── */}}
 <section class="bg-primary text-white py-12 px-4 text-center relative overflow-hidden">
@@ -68,7 +69,7 @@
           Keine Profis, sondern engagierte Bürgerinnen und Bürger: {{ $aktive }} aktive Einsatzkräfte, die rund um die Uhr bereit sind.
         </p>
         <p class="text-dark leading-relaxed mb-6">
-          Dahinter stehen {{ .Site.Params.foerdermitglieder }} Fördermitglieder, die unsere Arbeit durch ihre Mitgliedschaft im Verein ermöglichen.
+          Dahinter stehen {{ $foerder }} Fördermitglieder, die unsere Arbeit durch ihre Mitgliedschaft im Verein ermöglichen.
         </p>
         <a href="{{ "ueber-uns/" | relURL }}" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
           Mehr erfahren
@@ -150,7 +151,7 @@
       <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-sm">
         <div class="font-headline text-gray-500 text-sm uppercase tracking-widest mb-1">Fördernd</div>
         <h3 class="font-headline text-xl font-bold text-dark mb-3">Fördermitglied werden</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">Unterstütze uns mit einer Mitgliedschaft im Verein. {{ .Site.Params.foerdermitglieder }} Fördermitglieder stärken uns bereits den Rücken.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Unterstütze uns mit einer Mitgliedschaft im Verein. {{ $foerder }} Fördermitglieder stärken uns bereits den Rücken.</p>
         <a href="{{ "mitmachen/#foerdernd" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
       </div>
     </div>
