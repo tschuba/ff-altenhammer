@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $od := partialCached "onduty.html" "x" }}
+{{ $aktive := index $od.stats "active" | default .Site.Params.aktiveMitglieder }}
 
 {{/* ── 1. HERO ── */}}
 <section class="bg-primary text-white py-12 px-4 text-center relative overflow-hidden">
@@ -63,7 +65,7 @@
           Wir sind ganz normale Menschen aus Altenhammer — Nachbarn, Freunde, Familienmitglieder — die ihre Freizeit freiwillig dafür einsetzen, unsere Gemeinde sicherer zu machen.
         </p>
         <p class="text-dark leading-relaxed mb-4">
-          Keine Profis, sondern engagierte Bürgerinnen und Bürger: {{ .Site.Params.aktiveMitglieder }} aktive Einsatzkräfte, die rund um die Uhr bereit sind.
+          Keine Profis, sondern engagierte Bürgerinnen und Bürger: {{ $aktive }} aktive Einsatzkräfte, die rund um die Uhr bereit sind.
         </p>
         <p class="text-dark leading-relaxed mb-6">
           Dahinter stehen {{ .Site.Params.foerdermitglieder }} Fördermitglieder, die unsere Arbeit durch ihre Mitgliedschaft im Verein ermöglichen.
@@ -142,7 +144,7 @@
       <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-sm">
         <div class="font-headline text-primary text-sm uppercase tracking-widest mb-1">Aktiv</div>
         <h3 class="font-headline text-xl font-bold text-dark mb-3">Einsatzkraft werden</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">Ab 16 Jahren. Übungen, Ausbildung, Einsätze. {{ .Site.Params.aktiveMitglieder }} aktive Mitglieder zählen wir heute.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Ab 16 Jahren. Übungen, Ausbildung, Einsätze. {{ $aktive }} aktive Mitglieder zählen wir heute.</p>
         <a href="{{ "mitmachen/#aktiv" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
       </div>
       <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-sm">
@@ -160,9 +162,7 @@
   <div class="max-w-4xl mx-auto">
     <p class="font-headline text-sm text-primary uppercase tracking-widest mb-2">Veranstaltungen</p>
     <h2 class="font-headline text-3xl font-bold text-dark mb-8">Nächste Termine</h2>
-    {{ $cutoff := now.AddDate 0 0 -14 }}
-    {{ $termine := where (where .Site.RegularPages "Section" "termine") "Date" "gt" $cutoff }}
-    {{ $termine = $termine | first 3 }}
+    {{ $termine := first 3 (where (partial "termine.html" .Site) "Date" "gt" now) }}
     {{ if $termine }}
     <div class="space-y-4 mb-8">
       {{ range $termine }}
@@ -175,9 +175,9 @@
         <div class="flex-grow">
           <div class="font-headline font-bold text-dark text-lg">{{ .Title }}</div>
           <div class="text-sm text-gray-500 mt-0.5">
-            {{ .Date.Format "15:04 Uhr" }}{{ with .Params.ort }} · {{ . }}{{ end }}
+            {{ .Date.Format "15:04 Uhr" }}{{ with .Ort }} · {{ . }}{{ end }}
           </div>
-          {{ with .Summary }}<p class="text-sm text-gray-600 mt-1">{{ . | plainify }}</p>{{ end }}
+          {{ with .Text }}<p class="text-sm text-gray-600 mt-1">{{ . | plainify | truncate 160 }}</p>{{ end }}
         </div>
       </div>
       {{ end }}
