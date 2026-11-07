@@ -82,7 +82,7 @@ Externe Links mit `target="_blank"` via `extlink`-Shortcode:
 | Datei | Was fehlt |
 |---|---|
 | `content/spenden.md` | IBAN + BIC des Vereinskontos |
-| `content/kuchentheke.md` | Ausstattung, Mietpreis, Kaution, Bedingungen |
+| `content/kuchentheke.md` | Ausstattung, Mietpreis, Bedingungen |
 | `content/fahrzeuge.md` | Fahrzeuge, Baujahre, Fotos |
 | `content/ueber-uns/geschichte.md` | Chronik, historische Fotos |
 | `content/jubilaeum/_index.md` | Chronik, Archivfotos |
