@@ -14,8 +14,8 @@ Unsere Kuchentheke kann für private und gewerbliche Veranstaltungen gemietet we
 
 ## Mietbedingungen
 
-<!-- TODO: Mietpreis, Kaution, Stornofrist und maximale Mietdauer ergänzen (Zeilen "Mietpreis: wird ergänzt" und "Kaution: wird ergänzt" wieder einfügen) -->
-
+- Mietpreis: 30 € pro Veranstaltungstag, bar bei Abholung
+- Abholung am Vortag und Rückgabe am Folgetag sind inklusive. Längere Zeiträume sind nach Absprache möglich, wenn die Kuchentheke nicht anderweitig gebucht ist.
 - Selbstabholung und Rückgabe am Feuerwehrhaus
 - Rückgabe gereinigt
 
