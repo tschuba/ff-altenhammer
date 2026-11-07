@@ -1,20 +1,26 @@
 ---
 title: "Mannschaft"
 draft: false
+weight: 1
+icon: "👥"
+description: "Vorstand, Kommandanten und Einsatzkräfte"
 ---
 
-Unsere aktive Mannschaft besteht aus **32 Einsatzkräften** aus Altenhammer und Umgebung — Männer und Frauen, die ihre Freizeit freiwillig für die Sicherheit unserer Gemeinde einsetzen.
+Unsere aktive Mannschaft besteht aus **{{< mitglieder aktive >}} Einsatzkräften** aus Altenhammer und Umgebung — Männer und Frauen, die ihre Freizeit freiwillig für die Sicherheit unserer Gemeinde einsetzen.
 
-## Führung
+## Aktive Wehr
 
-<!-- TODO: Vorstand und Führungskräfte ergänzen (Kommandant, Stellvertreter, Gruppenführer) -->
+{{< personen >}}
+{{< person rolle="1. Kommandant" name="Rüdiger Hettler" >}}
+{{< person rolle="2. Kommandant" name="Florian Moser" >}}
+{{< /personen >}}
 
-| Funktion | Name |
-|---|---|
-| 1. Vorstand | Florian Plödt |
-| 2. Vorstand | Silke Schulte-Bahrenberg |
-| 1. Kommandant | Rüdiger Hettler |
-| 2. Kommandant | Florian Moser |
+## Verein
+
+{{< personen >}}
+{{< person rolle="1. Vorstand" name="Florian Plödt" >}}
+{{< person rolle="2. Vorstand" name="Silke Schulte-Bahrenberg" >}}
+{{< /personen >}}
 
 ## Einsatzkräfte
 

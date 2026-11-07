@@ -5,8 +5,6 @@ draft: false
 
 ## Feuerwehrhaus Altenhammer
 
-<!-- TODO: Genaue Adresse des Feuerwehrhauses eintragen (falls abweichend von Vereinsanschrift) -->
-
 Flossenbürger Str. 9  
 92696 Flossenbürg
 

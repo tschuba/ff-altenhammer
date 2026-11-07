@@ -18,7 +18,7 @@
       <div class="flex-grow">
         <div class="font-headline font-bold text-dark text-lg leading-tight">{{ .Title }}</div>
         <div class="text-sm text-gray-500 mt-1">
-          Jeden {{ .Params.wochentag }} · {{ .Params.uhrzeit }}{{ with .Params.ort }} · {{ . }}{{ end }}
+          Jeden {{ .Params.wochentag }} · {{ .Params.uhrzeit }}{{ with .Params.ort }} · {{ partial "ort.html" . }}{{ end }}
         </div>
         {{ with .Content }}<div class="prose prose-sm mt-2 max-w-none text-gray-600">{{ . }}</div>{{ end }}
       </div>
@@ -48,7 +48,7 @@
       <div class="flex-grow">
         <div class="font-headline font-bold text-dark text-lg leading-tight">{{ .Title }}</div>
         <div class="text-sm text-gray-500 mt-1">
-          {{ .Date.Format "15:04 Uhr" }}{{ with .Ort }} · {{ . }}{{ end }}
+          {{ .Date.Format "15:04 Uhr" }}{{ with .Ort }} · {{ partial "ort.html" . }}{{ end }}
         </div>
         {{ with .Text }}<div class="prose prose-sm mt-2 max-w-none text-gray-600">{{ . }}</div>{{ end }}
       </div>
@@ -69,7 +69,7 @@
       </div>
       <div>
         <div class="font-headline font-bold text-gray-600">{{ .Title }}</div>
-        <div class="text-xs text-gray-400">{{ .Date.Format "15:04 Uhr" }}{{ with .Ort }} · {{ . }}{{ end }}</div>
+        <div class="text-xs text-gray-400">{{ .Date.Format "15:04 Uhr" }}{{ with .Ort }} · {{ partial "ort.html" . }}{{ end }}</div>
       </div>
     </div>
     {{ end }}

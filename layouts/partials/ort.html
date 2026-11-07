@@ -1,0 +1,4 @@
+{{- /* Ort-Text; das eigene Feuerwehrhaus wird auf die Kontaktseite verlinkt. */ -}}
+{{- if eq . "Feuerwehrhaus Altenhammer" -}}
+<a href="{{ "kontakt/#feuerwehrhaus-altenhammer" | relURL }}" class="underline hover:text-primary">{{ . }}</a>
+{{- else -}}{{ . }}{{- end -}}

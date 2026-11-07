@@ -1,7 +1,7 @@
 ---
 title: "Schauübung & Weinabend"
 date: 2026-09-26T14:00:00
-ort: "FFW-Haus Altenhammer"
+ort: "Feuerwehrhaus Altenhammer"
 draft: false
 ---
 

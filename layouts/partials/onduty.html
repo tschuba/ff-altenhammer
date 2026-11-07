@@ -1,5 +1,5 @@
 {{- /* on-duty Public API (Build-Zeit). Liefert dict: stats, events. Bei Fehler leer -> Fallback auf Params/lokale Termine. */ -}}
-{{- $base := site.Params.ondutyUrl | default "https://on-duty.schubs.net" -}}
+{{- $base := site.Params.ondutyUrl | default "https://wache.altenhammer.bayern" -}}
 {{- $out := dict "stats" dict "events" slice -}}
 {{- with try (resources.GetRemote (printf "%s/api/public/v1/stats" $base)) -}}
   {{- if and .Value (not .Err) -}}{{- with transform.Unmarshal .Value }}{{ $out = merge $out (dict "stats" (.members | default dict)) }}{{ end -}}{{- else }}{{ warnf "on-duty stats: %v" .Err }}{{ end -}}

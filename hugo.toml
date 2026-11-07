@@ -7,6 +7,8 @@ buildFuture = true
 [params]
   aktiveMitglieder    = 32
   foerdermitglieder   = 45
+  # Nimmt die Kinderfeuerwehr neue Kinder auf? Fehlt der Wert, gilt: nein.
+  kinderfeuerwehrAufnahme = false
   gegruendet          = 1926
   jubilaeum           = true
   facebookUrl         = "https://www.facebook.com/profile.php?id=100061266252902"
@@ -14,7 +16,7 @@ buildFuture = true
 heyformKontakt      = "KaiPEZNP"
   heyformSpende       = "FAzpiAxb"
   heyformBaseUrl      = "https://ff-forms.schubs.net"
-  kuchenthekenUrl     = "https://on-duty.schubs.net/lend/38999921-5ba5-4ef3-a2d6-3810083ebcb5"
+  kuchenthekenUrl     = "https://wache.altenhammer.bayern/lend/38999921-5ba5-4ef3-a2d6-3810083ebcb5"
 
 [build]
   writeStats = true

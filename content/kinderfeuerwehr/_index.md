@@ -16,6 +16,18 @@ Die Kinderfeuerwehr Altenhammer ist der ideale Einstieg für Kinder ab **6 Jahre
 
 <!-- TODO: Fotos der Kinderfeuerwehr ergänzen -->
 
+## Unser Team
+
+{{< personen >}}
+{{< person rolle="Leitung" name="Silke Schulte-Bahrenberg" >}}
+{{< person rolle="Leitung" name="Martina Englmann" >}}
+{{< person rolle="Leitung" name="Selina Zahn" >}}
+{{< /personen >}}
+
 ## Mitmachen
 
+{{< kf-hinweis >}}
+
+{{% kf-offen %}}
 Interesse? Alle Infos zur Anmeldung unter [Kinderfeuerwehr — Mitmachen]({{< relref "kinderfeuerwehr/mitmachen" >}}).
+{{% /kf-offen %}}

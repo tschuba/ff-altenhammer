@@ -1,0 +1,4 @@
+{{- /* Anzahl aus on-duty API (Build-Zeit), Fallback auf hugo.toml. Aufruf: {{< mitglieder aktive >}} oder {{< mitglieder foerder >}} */ -}}
+{{- $stats := (partialCached "onduty.html" "x").stats -}}
+{{- if eq (.Get 0) "aktive" -}}{{ index $stats "active" | default site.Params.aktiveMitglieder }}
+{{- else -}}{{ index $stats "supporting" | default site.Params.foerdermitglieder }}{{- end -}}

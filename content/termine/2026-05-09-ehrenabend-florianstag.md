@@ -1,7 +1,7 @@
 ---
 title: "Ehrenabend & Florianstag"
 date: 2026-05-09T18:00:00
-ort: "FFW-Haus Altenhammer"
+ort: "Feuerwehrhaus Altenhammer"
 draft: false
 ---
 

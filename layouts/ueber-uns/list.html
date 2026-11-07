@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="bg-primary text-white py-12 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="font-headline text-4xl font-bold mb-4">{{ .Title }}</h1>
+    <div class="text-lg text-white/90 max-w-2xl">{{ .Content }}</div>
+  </div>
+</section>
+<div class="max-w-4xl mx-auto px-4 py-12">
+  <div class="grid sm:grid-cols-2 gap-6">
+    {{ range .Pages.ByWeight }}
+    <a href="{{ .RelPermalink }}" class="block bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md hover:border-primary transition-all group">
+      <div class="text-4xl mb-4" aria-hidden="true">{{ .Params.icon }}</div>
+      <h2 class="font-headline text-2xl font-bold text-dark group-hover:text-primary transition-colors mb-2">{{ .Title }}</h2>
+      <p class="text-gray-600">{{ .Params.description }}</p>
+      <span class="inline-block mt-4 text-primary font-semibold">Mehr erfahren →</span>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

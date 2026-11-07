@@ -5,17 +5,18 @@ draft: false
 
 Die Freiwillige Feuerwehr Altenhammer ist auf Spenden und Fördermitgliedschaften angewiesen, um Ausrüstung, Fahrzeuge und Ausbildung zu finanzieren, die über die öffentliche Förderung hinausgehen. Jeder Beitrag hilft — herzlichen Dank!
 
+<!-- TODO: Abschnitt Spendenkonto wieder einfügen, sobald IBAN und BIC vorliegen (danach GiroCode-QR als SVG erzeugen):
+
 ## Spendenkonto
 
 **Feuerwehrverein Altenhammer e.V.**
 
 | | |
 |---|---|
-| IBAN | <!-- TODO: IBAN eintragen --> |
-| BIC | <!-- TODO: BIC eintragen --> |
+| IBAN | ... |
+| BIC | ... |
 | Verwendungszweck | Spende FF Altenhammer |
-
-<!-- GIROCODE-QR-PLATZHALTER: SVG wird generiert sobald IBAN bekannt ist -->
+-->
 
 ## Spendenquittung
 
