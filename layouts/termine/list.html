@@ -7,6 +7,7 @@
 
 <div class="max-w-4xl mx-auto px-4 py-12">
   {{ $dauertermine := where .Pages "Params.recurring" true }}
+  {{ if not site.Params.kinderfeuerwehrAufnahme }}{{ $dauertermine = where $dauertermine "Params.nurbeiaufnahme" "ne" true }}{{ end }}
   {{ if $dauertermine }}
   <h2 class="font-headline text-2xl font-bold text-dark mb-6">Regelmäßige Veranstaltungen</h2>
   <div class="space-y-4 mb-12">
@@ -18,7 +19,7 @@
       <div class="flex-grow">
         <div class="font-headline font-bold text-dark text-lg leading-tight">{{ .Title }}</div>
         <div class="text-sm text-gray-500 mt-1">
-          Jeden {{ .Params.wochentag }} · {{ .Params.uhrzeit }}{{ with .Params.ort }} · {{ partial "ort.html" . }}{{ end }}
+          {{ .Params.rhythmus | default (printf "Jeden %s" .Params.wochentag) }}{{ with .Params.uhrzeit }} · {{ . }}{{ end }}{{ with .Params.ort }} · {{ partial "ort.html" . }}{{ end }}
         </div>
         {{ with .Content }}<div class="prose prose-sm mt-2 max-w-none text-gray-600">{{ . }}</div>{{ end }}
       </div>
