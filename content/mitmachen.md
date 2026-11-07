@@ -29,10 +29,10 @@ Aktuell unterstützen uns **{{< mitglieder foerder >}} Fördermitglieder** — h
 
 Fülle das passende Formular aus und gib es beim Vorstand ab — oder sende es per E-Mail an [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern).
 
-| Formular | DOCX | PDF |
-|---|---|---|
-| Aufnahmeantrag (ab 18 Jahre) | [Download .docx](../dokumente/aufnahmeantrag-erwachsene.docx) | [Download .pdf](../dokumente/aufnahmeantrag-erwachsene.pdf) |
-| Aufnahmeantrag (Minderjährige) | [Download .docx](../dokumente/aufnahmeantrag-minderjaehrige.docx) | [Download .pdf](../dokumente/aufnahmeantrag-minderjaehrige.pdf) |
+| Formular | DOCX |
+|---|---|
+| Aufnahmeantrag (ab 18 Jahre) | [Download .docx](../dokumente/aufnahmeantrag-erwachsene.docx) |
+| Aufnahmeantrag (Minderjährige) | [Download .docx](../dokumente/aufnahmeantrag-minderjaehrige.docx) |
 
 ## Kontakt
 
