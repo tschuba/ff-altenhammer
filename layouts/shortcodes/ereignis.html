@@ -1,0 +1,16 @@
+{{- $hl := .Get "hervorgehoben" -}}
+<div class="relative pl-8">
+  {{- if $hl }}
+  <span class="absolute -left-[14px] top-3 w-6 h-6 rounded-full bg-gold border-4 border-white shadow flex items-center justify-center text-[10px] leading-none" aria-hidden="true">★</span>
+  {{- else }}
+  <span class="absolute -left-[10px] {{ if .Get "jahr" }}top-2{{ else }}top-1.5{{ end }} w-4 h-4 rounded-full bg-primary border-4 border-white" aria-hidden="true"></span>
+  {{- end }}
+  <div{{ if $hl }} class="bg-amber-50 border border-gold rounded-xl p-4"{{ end }}>
+  {{- with .Get "jahr" }}<div class="font-headline {{ if $hl }}text-3xl{{ else }}text-2xl{{ end }} font-bold text-primary leading-tight mb-2">{{ . }}</div>{{ end }}
+  <div class="text-gray-700 leading-relaxed [&_a]:text-primary [&_a]:underline{{ if .Get "jahr" }} mt-2{{ end }}">{{ .Inner | markdownify }}</div>
+  {{- with .Get "bild" }}
+  <figure class="mt-4"><img src="{{ . | relURL }}" alt="{{ $.Get "alt" }}" class="rounded-xl w-full">
+    {{- with $.Get "unterschrift" }}<figcaption class="text-sm text-gray-500 mt-2">{{ . }}</figcaption>{{ end }}</figure>
+  {{- end }}
+  </div>
+</div>

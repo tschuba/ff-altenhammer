@@ -2,7 +2,7 @@
 title: "Stammtisch"
 recurring: true
 uhrzeit: "ab 19:00 Uhr"
-ort: "FFW-Haus Altenhammer"
+ort: "Feuerwehrhaus Altenhammer"
 wochentag: "Donnerstag"
 draft: false
 ---

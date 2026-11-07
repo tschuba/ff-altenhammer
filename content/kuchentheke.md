@@ -7,17 +7,15 @@ Unsere Kuchentheke kann für private und gewerbliche Veranstaltungen gemietet we
 
 ## Was ist dabei?
 
-<!-- TODO: Genaue Ausstattung der Kuchentheke beschreiben (Größe, Zubehör, Stromversorgung etc.) -->
+- Gekühlte Kuchentheke
+- Stromanschluss: 230 V mit Schuko-Stecker
 
-- Theke inkl. Aufbau-Anleitung
-- *Details zur Ausstattung werden ergänzt*
+<!-- TODO: Größe, Gewicht, Zubehör und Transport ergänzen -->
 
 ## Mietbedingungen
 
-<!-- TODO: Mietpreis, Kaution, Abhol-/Rückgabebedingungen, Reinigungspflicht ergänzen -->
+<!-- TODO: Mietpreis, Kaution, Stornofrist und maximale Mietdauer ergänzen (Zeilen "Mietpreis: wird ergänzt" und "Kaution: wird ergänzt" wieder einfügen) -->
 
-- Mietpreis: *wird ergänzt*
-- Kaution: *wird ergänzt*
 - Selbstabholung und Rückgabe am Feuerwehrhaus
 - Rückgabe gereinigt
 

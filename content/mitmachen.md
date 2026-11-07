@@ -13,17 +13,17 @@ Als aktives Mitglied bist du Teil der Einsatztruppe: Du nimmst an Übungen teil,
 - Körperliche Eignung für den Einsatzdienst
 - Bereitschaft zu regelmäßigen Übungsabenden
 
-Aktuell zählen wir **32 aktive Einsatzkräfte** — komm dazu!
+Aktuell zählen wir **{{< mitglieder aktive >}} aktive Einsatzkräfte** — komm dazu!
 
 ## Kinderfeuerwehr {#kinder}
 
-Kinder ab **6 Jahren** können in der Kinderfeuerwehr spielerisch die Feuerwehr kennenlernen — ohne Einsatzdienst und Verpflichtungen. Mehr dazu auf der Seite [Kinderfeuerwehr](/kinderfeuerwehr/).
+Kinder ab **6 Jahren** können in der Kinderfeuerwehr spielerisch die Feuerwehr kennenlernen — ohne Einsatzdienst und Verpflichtungen. {{< kf-hinweis >}} Mehr dazu auf der Seite [Kinderfeuerwehr](/kinderfeuerwehr/).
 
 ## Fördernde Mitgliedschaft {#foerdernd}
 
 Als Fördermitglied unterstützt du uns finanziell ohne aktiven Dienst. Der Jahresbeitrag fließt direkt in Ausrüstung, Fahrzeuge und Ausbildung. Keine Übungen, keine Einsätze — aber ein wichtiger Beitrag für die Sicherheit unserer Gemeinde.
 
-Aktuell unterstützen uns **45 Fördermitglieder** — herzlichen Dank!
+Aktuell unterstützen uns **{{< mitglieder foerder >}} Fördermitglieder** — herzlichen Dank!
 
 ## Aufnahmeantrag
 

@@ -124,7 +124,7 @@
       <p class="font-headline text-sm uppercase tracking-widest text-red-200 mb-1">Nachwuchs</p>
       <h2 class="font-headline text-3xl font-bold mb-3">Kinderfeuerwehr Altenhammer</h2>
       <p class="text-red-100 leading-relaxed mb-6 max-w-lg">
-        Für Kinder ab 6 Jahren — spielerisch und sicher die Feuerwehr entdecken. Wir freuen uns über jeden neuen Nachwuchs!
+        Für Kinder ab 6 Jahren — spielerisch und sicher die Feuerwehr entdecken. {{ if site.Params.kinderfeuerwehrAufnahme }}Wir freuen uns über jeden neuen Nachwuchs!{{ else }}Aktuell sind leider keine weiteren Plätze frei.{{ end }}
       </p>
       <a href="{{ "kinderfeuerwehr/" | relURL }}" class="inline-block bg-white text-primary font-headline font-bold px-6 py-2.5 rounded hover:bg-gray-100 transition-colors">
         Mehr erfahren
@@ -176,7 +176,7 @@
         <div class="flex-grow">
           <div class="font-headline font-bold text-dark text-lg">{{ .Title }}</div>
           <div class="text-sm text-gray-500 mt-0.5">
-            {{ .Date.Format "15:04 Uhr" }}{{ with .Ort }} · {{ . }}{{ end }}
+            {{ .Date.Format "15:04 Uhr" }}{{ with .Ort }} · {{ partial "ort.html" . }}{{ end }}
           </div>
           {{ with .Text }}<p class="text-sm text-gray-600 mt-1">{{ . | plainify | truncate 160 }}</p>{{ end }}
         </div>
@@ -213,7 +213,7 @@
         Gemütliches Zusammensitzen, eine Runde Karten spielen oder einfach Abschalten —
         jeder ist willkommen, ganz ohne Anmeldung. Gegen eine kleine Spende gibt es Getränke in entspannter Atmosphäre.
       </p>
-      <p class="text-sm text-gray-400 mt-2">FFW-Haus Altenhammer</p>
+      <p class="text-sm text-gray-400 mt-2">{{ partial "ort.html" "Feuerwehrhaus Altenhammer" }}</p>
     </div>
   </div>
 </section>

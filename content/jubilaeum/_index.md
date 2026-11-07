@@ -17,12 +17,11 @@ Ein Fest für die ganze Gemeinde: Festzug, Vorführungen, Ehrungen und gemütlic
 
 ## Chronik
 
-<!-- TODO: Chronik der FF Altenhammer ergänzen — gegründet 1926, wichtige Meilensteine, Fahrzeuge, Vorstände -->
+{{< zeitleiste >}}
+{{< ereignis jahr="10. Juni 1926" >}}Gründung der Freiwilligen Feuerwehr Altenhammer{{< /ereignis >}}
+{{< ereignis jahr="2026" hervorgehoben="ja" >}}100 Jahre FF Altenhammer{{< /ereignis >}}
+{{< /zeitleiste >}}
 
-*Die vollständige Chronik der FF Altenhammer wird hier ergänzt.*
+Die ganze Geschichte der Wehr, von der Betriebsfeuerwehr bis heute, findest du unter [Geschichte]({{< relref "ueber-uns/geschichte" >}}).
 
-## Historische Fotos
-
-<!-- TODO: Historische Fotos aus dem Vereinsarchiv einfügen -->
-
-*Historische Aufnahmen aus dem Vereinsarchiv folgen.*
+<!-- TODO: Abschnitt "## Historische Fotos" mit Fotos aus dem Vereinsarchiv einfügen -->

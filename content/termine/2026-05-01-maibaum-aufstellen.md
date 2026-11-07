@@ -1,7 +1,7 @@
 ---
 title: "Maibaum Aufstellen"
 date: 2026-05-01T10:00:00
-ort: "FFW-Haus Altenhammer"
+ort: "Feuerwehrhaus Altenhammer"
 draft: false
 ---
 

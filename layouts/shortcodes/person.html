@@ -1,0 +1,14 @@
+{{- $name := .Get "name" -}}
+<div class="not-prose flex items-center gap-4 bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+  {{- with .Get "foto" }}
+  <img src="{{ . | relURL }}" alt="{{ $name }}" class="w-16 h-16 rounded-full object-cover shrink-0">
+  {{- else }}
+  <div class="w-16 h-16 rounded-full bg-primary text-white font-headline text-xl font-bold flex items-center justify-center shrink-0" aria-hidden="true">
+    {{- range first 1 (split $name " ") }}{{ substr . 0 1 }}{{ end }}{{ substr (index (last 1 (split $name " ")) 0) 0 1 -}}
+  </div>
+  {{- end }}
+  <div>
+    <div class="text-sm uppercase tracking-wide text-primary font-semibold">{{ .Get "rolle" }}</div>
+    <div class="font-headline text-lg font-bold text-dark">{{ $name }}</div>
+  </div>
+</div>
