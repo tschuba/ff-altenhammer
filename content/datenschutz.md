@@ -30,9 +30,9 @@ Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung / berechtigtes In
 
 Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Sie können jederzeit die Löschung Ihrer gespeicherten Daten verlangen (s. Abschnitt 8).
 
-## 5. Kuchentheke-Buchung
+## 5. Verleih-Buchung
 
-Anfragen zur Kuchentheke werden über **Easy!Appointments** abgewickelt, das ebenfalls auf unserem eigenen Server (schubs.net, Deutschland) betrieben wird. Die von Ihnen eingegebenen Buchungsdaten werden dort gespeichert und zur Bearbeitung Ihrer Anfrage verwendet.
+Anfragen zum Verleih werden über **Easy!Appointments** abgewickelt, das ebenfalls auf unserem eigenen Server (schubs.net, Deutschland) betrieben wird. Die von Ihnen eingegebenen Buchungsdaten werden dort gespeichert und zur Bearbeitung Ihrer Anfrage verwendet.
 
 Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung).
 

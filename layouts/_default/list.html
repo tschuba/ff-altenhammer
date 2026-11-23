@@ -12,7 +12,7 @@
     {{ . }}
   </div>
   {{ end }}
-  {{ if .Pages }}
+  {{ if and .Pages (ne .Section "mitmachen") }}
   {{ $cta := eq .Section "kinderfeuerwehr" }}
   <div class="grid sm:grid-cols-2 gap-6{{ if $cta }} mt-16{{ end }}">
     {{ range .Pages }}

@@ -114,47 +114,15 @@
   </div>
 </section>
 
-{{/* ── 5. KINDERFEUERWEHR-TEASER ── */}}
-<section class="py-16 px-4 bg-primary text-white">
-  <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
-    <div class="flex-shrink-0">
-      <img src="{{ "images/logo-loeschzwerge.png" | relURL }}" alt="Hammerer Löschzwerge" class="h-36 w-auto drop-shadow-lg">
-    </div>
-    <div>
-      <p class="font-headline text-sm uppercase tracking-widest text-red-200 mb-1">Nachwuchs</p>
-      <h2 class="font-headline text-3xl font-bold mb-3">Kinderfeuerwehr Altenhammer</h2>
-      <p class="text-red-100 leading-relaxed mb-6 max-w-lg">
-        Für Kinder ab 6 Jahren — spielerisch und sicher die Feuerwehr entdecken. {{ if site.Params.kinderfeuerwehrAufnahme }}Wir freuen uns über jeden neuen Nachwuchs!{{ else }}Aktuell sind leider keine weiteren Plätze frei.{{ end }}
-      </p>
-      <a href="{{ "kinderfeuerwehr/" | relURL }}" class="inline-block bg-white text-primary font-headline font-bold px-6 py-2.5 rounded hover:bg-gray-100 transition-colors">
-        Mehr erfahren
-      </a>
-    </div>
-  </div>
-</section>
-
 {{/* ── 6. MITMACHEN-TEASER ── */}}
 <section class="py-16 px-4 bg-surface">
   <div class="max-w-4xl mx-auto">
     <p class="font-headline text-sm text-primary uppercase tracking-widest mb-2 text-center">Mitmachen</p>
     <h2 class="font-headline text-3xl font-bold text-dark mb-3 text-center">Werde Teil der Feuerwehr</h2>
     <p class="text-gray-600 text-center mb-10 max-w-xl mx-auto">
-      Ob aktiver Einsatzdienst oder als Fördermitglied — jede Form der Unterstützung zählt.
+      Ob im Einsatzdienst, in der Kinderfeuerwehr oder als Fördermitglied — jede Form der Unterstützung zählt.
     </p>
-    <div class="grid sm:grid-cols-2 gap-6">
-      <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-sm">
-        <div class="font-headline text-primary text-sm uppercase tracking-widest mb-1">Aktiv</div>
-        <h3 class="font-headline text-xl font-bold text-dark mb-3">Einsatzkraft werden</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">Ab 16 Jahren. Übungen, Ausbildung, Einsätze. {{ $aktive }} aktive Mitglieder zählen wir heute.</p>
-        <a href="{{ "mitmachen/#aktiv" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
-      </div>
-      <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-sm">
-        <div class="font-headline text-gray-500 text-sm uppercase tracking-widest mb-1">Fördernd</div>
-        <h3 class="font-headline text-xl font-bold text-dark mb-3">Fördermitglied werden</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">Unterstütze uns mit einer Mitgliedschaft im Verein. {{ $foerder }} Fördermitglieder stärken uns bereits den Rücken.</p>
-        <a href="{{ "mitmachen/#foerdernd" | relURL }}" class="text-primary font-headline font-bold hover:underline text-sm">Mehr erfahren →</a>
-      </div>
-    </div>
+    {{ partial "mitmachen-karten.html" (dict "voll" false) }}
   </div>
 </section>
 
@@ -218,15 +186,15 @@
   </div>
 </section>
 
-{{/* ── 9. KUCHENTHEKE-TEASER ── */}}
+{{/* ── 9. VERLEIH-TEASER ── */}}
 <section class="py-16 px-4 bg-white">
   <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8">
     <div class="flex-shrink-0 text-5xl select-none" aria-hidden="true">🎂</div>
     <div>
-      <p class="font-headline text-sm text-primary uppercase tracking-widest mb-1">Verleih</p>
-      <h2 class="font-headline text-2xl font-bold text-dark mb-2">Kuchentheke mieten</h2>
+      <p class="font-headline text-sm text-primary uppercase tracking-widest mb-1">Mieten</p>
+      <h2 class="font-headline text-2xl font-bold text-dark mb-2">Verleih</h2>
       <p class="text-gray-600 leading-relaxed mb-4">
-        Unsere Kuchentheke kann für Veranstaltungen gemietet werden. Einfach Verfügbarkeit prüfen und online anfragen.
+        Wir verleihen Ausrüstung für Veranstaltungen, aktuell unsere Kuchentheke. Einfach Verfügbarkeit prüfen und online anfragen.
       </p>
       <a href="{{ site.Params.kuchenthekenUrl }}" target="_blank" rel="noopener" class="inline-block bg-primary text-white font-headline font-bold px-6 py-2.5 rounded hover:bg-primary-dark transition-colors">
         Verfügbarkeit prüfen
