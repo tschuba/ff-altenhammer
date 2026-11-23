@@ -1,0 +1,15 @@
+<div class="not-prose my-10">
+  <h2 class="font-headline text-2xl font-bold text-dark mb-6">Wofür wir Spenden einsetzen</h2>
+  <div class="grid gap-4 sm:grid-cols-2">
+    {{ range slice
+      (dict "t" "Ausrüstung" "d" "Schutzkleidung, Geräte und Material, die über die öffentliche Förderung hinausgehen.")
+      (dict "t" "Fahrzeuge" "d" "Erhalt und Ausstattung unserer Einsatzfahrzeuge.")
+      (dict "t" "Ausbildung" "d" "Lehrgänge und Übungen für eine gut vorbereitete Mannschaft.")
+      (dict "t" "Jugendarbeit" "d" "Kinderfeuerwehr und Nachwuchsförderung." ) }}
+    <div class="bg-surface border-l-4 border-primary rounded-lg p-5 shadow-sm">
+      <h3 class="font-headline text-lg font-bold text-dark mb-1">{{ .t }}</h3>
+      <p class="text-sm text-gray-700">{{ .d }}</p>
+    </div>
+    {{ end }}
+  </div>
+</div>

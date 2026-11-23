@@ -1,9 +1,12 @@
 ---
 title: "Kinderfeuerwehr"
+aliases: ["/kinderfeuerwehr/", "/kinderfeuerwehr/mitmachen/"]
 draft: false
 ---
 
 Die Kinderfeuerwehr Altenhammer ist der ideale Einstieg für Kinder ab **6 Jahren** — spielerisch, sicher und mit viel Spaß. Hier lernen die Kleinen die Feuerwehr kennen, ohne Einsatzdienst oder Verpflichtungen.
+
+{{< kf-hinweis >}}
 
 ## Was wir machen
 
@@ -23,3 +26,28 @@ Die Kinderfeuerwehr Altenhammer ist der ideale Einstieg für Kinder ab **6 Jahre
 {{< person rolle="Leitung" name="Martina Englmann" >}}
 {{< person rolle="Leitung" name="Selina Zahn" >}}
 {{< /personen >}}
+
+
+{{% kf-offen %}}
+## Wer kann mitmachen?
+
+Kinder ab **6 Jahren** aus Altenhammer und Umgebung sind herzlich willkommen. Ein Mindestalter gibt es zwar offiziell nicht, aber ab 6 Jahren macht es am meisten Spaß.
+
+## Wie anmelden?
+
+Einfach beim nächsten Treffen vorbeikommen oder kurz melden:
+
+- E-Mail: [post@feuerwehr.altenhammer.bayern](mailto:post@feuerwehr.altenhammer.bayern)
+
+## Aufnahmeantrag
+
+Für die Anmeldung bitte den Aufnahmeantrag für Minderjährige ausfüllen:
+
+| | |
+|---|---|
+| Aufnahmeantrag (Minderjährige) | [Download .docx](../../dokumente/aufnahmeantrag-minderjaehrige.docx) |
+
+## Nächste Termine
+
+Die aktuellen Termine der Kinderfeuerwehr findest du unter [Termine]({{< relref "termine" >}}).
+{{% /kf-offen %}}

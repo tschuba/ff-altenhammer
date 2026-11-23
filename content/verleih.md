@@ -1,5 +1,6 @@
 ---
-title: "Kuchentheke"
+title: "Verleih"
+aliases: ["/kuchentheke/"]
 draft: false
 ---
 

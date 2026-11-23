@@ -1,0 +1,55 @@
+{{- /* Drei Wege zum Mitmachen. Aufruf: partial "mitmachen-karten.html" (dict "voll" true|false) */ -}}
+{{ $voll := .voll }}
+{{ $od := partialCached "onduty.html" "x" }}
+{{ $aktive := index $od.stats "active" | default site.Params.aktiveMitglieder }}
+{{ $foerder := index $od.stats "supporting" | default site.Params.foerdermitglieder }}
+{{ $btn := "mt-auto block whitespace-nowrap text-center bg-primary text-white font-headline font-bold px-5 py-3 rounded hover:bg-primary-dark transition-colors no-underline" }}
+{{ $link := "mt-auto text-primary font-headline font-bold hover:underline text-sm" }}
+{{ $ul := "text-gray-600 text-sm leading-snug space-y-1.5 mb-6 list-none p-0 m-0" }}
+{{ $erw := "dokumente/aufnahmeantrag-erwachsene.docx" | relURL }}
+{{ $min := "dokumente/aufnahmeantrag-minderjaehrige.docx" | relURL }}
+<div class="not-prose grid md:grid-cols-3 gap-6 items-stretch">
+  <div id="aktiv" class="bg-white rounded-xl p-6 border-2 border-primary shadow-sm flex flex-col">
+    <div class="font-headline text-primary text-sm uppercase tracking-widest mb-1">Ab 16 Jahren</div>
+    <h3 class="font-headline text-xl font-bold text-dark mb-3">Einsatzkraft</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">Übungen, Ausbildung, Einsätze. {{ $aktive }} aktive Mitglieder zählen wir heute.</p>
+    {{ if $voll }}
+    <ul class="{{ $ul }}">
+      <li><span class="text-primary">✓</span> Körperliche Eignung für den Einsatzdienst</li>
+      <li><span class="text-primary">✓</span> Bereitschaft zu regelmäßigen Übungsabenden</li>
+    </ul>
+    <p class="text-gray-500 text-xs mt-auto mb-2 text-center">Unter 18? <a href="{{ $min }}" class="text-primary underline">Antrag für Minderjährige</a></p>
+    <a href="{{ $erw }}" class="{{ $btn | replace "mt-auto " "" }}">⬇ Antrag herunterladen</a>
+    {{ else }}
+    <a href="{{ "mitmachen/#aktiv" | relURL }}" class="{{ $link }}">Mehr erfahren →</a>
+    {{ end }}
+  </div>
+  <div id="kinder" class="bg-white rounded-xl p-6 border-2 border-primary shadow-sm flex flex-col relative">
+    <img src="{{ "images/logo-loeschzwerge.png" | relURL }}" alt="Hammerer Löschzwerge" class="absolute top-3 right-3 h-16 w-auto">
+    <div class="font-headline text-primary text-sm uppercase tracking-widest mb-1">Ab 6 Jahren</div>
+    <h3 class="font-headline text-xl font-bold text-dark mb-3 pr-16">Kinderfeuerwehr</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">Spielerisch die Feuerwehr entdecken. {{ if site.Params.kinderfeuerwehrAufnahme }}Wir freuen uns über neuen Nachwuchs!{{ else }}<strong>Aktuell keine freien Plätze.</strong>{{ end }}</p>
+    {{ if $voll }}
+    <ul class="{{ $ul }}">
+      <li><span class="text-primary">✓</span> Ohne Einsatzdienst und Verpflichtungen</li>
+      <li><span class="text-primary">✓</span> Basteln, Ausflüge, Spiele</li>
+      <li><span class="text-primary">✓</span> Einstieg in die Jugendfeuerwehr</li>
+    </ul>
+    {{ end }}
+    <a href="{{ "mitmachen/kinderfeuerwehr/" | relURL }}" class="{{ if $voll }}{{ $btn }}{{ else }}{{ $link }}{{ end }}">{{ if $voll }}→ Zur Kinderfeuerwehr{{ else }}Mehr erfahren →{{ end }}</a>
+  </div>
+  <div id="foerdernd" class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-sm flex flex-col">
+    <div class="font-headline text-gray-500 text-sm uppercase tracking-widest mb-1">Für alle</div>
+    <h3 class="font-headline text-xl font-bold text-dark mb-3">Fördermitglied</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">Unterstütze uns mit einer Mitgliedschaft im Verein. {{ $foerder }} Fördermitglieder stärken uns bereits den Rücken.</p>
+    {{ if $voll }}
+    <ul class="{{ $ul }}">
+      <li><span class="text-primary">✓</span> Jahresbeitrag für Ausrüstung und Ausbildung</li>
+      <li><span class="text-primary">✓</span> Keine Übungen, keine Einsätze</li>
+    </ul>
+    <a href="{{ $erw }}" class="{{ $btn }}">⬇ Antrag herunterladen</a>
+    {{ else }}
+    <a href="{{ "mitmachen/#foerdernd" | relURL }}" class="{{ $link }}">Mehr erfahren →</a>
+    {{ end }}
+  </div>
+</div>

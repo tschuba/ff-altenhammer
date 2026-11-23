@@ -5,6 +5,8 @@ draft: false
 
 Die Freiwillige Feuerwehr Altenhammer ist auf Spenden und Fördermitgliedschaften angewiesen, um Ausrüstung, Fahrzeuge und Ausbildung zu finanzieren, die über die öffentliche Förderung hinausgehen. Jeder Beitrag hilft — herzlichen Dank!
 
+{{< spenden-verwendung >}}
+
 <!-- TODO: Abschnitt Spendenkonto wieder einfügen, sobald IBAN und BIC vorliegen (danach GiroCode-QR als SVG erzeugen):
 
 ## Spendenkonto
@@ -18,12 +20,10 @@ Die Freiwillige Feuerwehr Altenhammer ist auf Spenden und Fördermitgliedschafte
 | Verwendungszweck | Spende FF Altenhammer |
 -->
 
-## Spendenquittung
+<!-- ## Spendenquittung
 
 Für Spenden stellen wir gerne eine Spendenquittung aus. Bitte fülle dazu das Formular aus:
 
-{{< heyform "FAzpiAxb" >}}
+{{< heyform "FAzpiAxb" >}} -->
 
----
-
-Alternativ kannst du uns auch als [Fördermitglied]({{< relref "mitmachen" >}}#foerdernd) unterstützen — mit einem festen Jahresbeitrag, der unsere Arbeit dauerhaft stärkt.
+{{< spenden-cta >}}
